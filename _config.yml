@@ -7,7 +7,7 @@ title:            Vinayak Nayak
 tagline:          'Portfolio Blog'
 description:      'Mechanical Engineer, AI Developer. <a href="https://twitter.com/ElisonSherton" target="_blank">@ElisonSherton</a>.'
 url:              https://elisonsherton.github.io/
-baseurl:          /
+baseurl:          
 
 author:
   name:           'Vinayak Nayak'
