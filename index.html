@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
@@ -34,4 +34,106 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->
+
+<!-- Adding Resume to the homescreen -->
+<section id="resume" class="resume">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Resume</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+        <h3 class="resume-title">Sumary</h3>
+        <div class="resume-item pb-0">
+          <h4>Karan Jeswani</h4>
+          <p><em>I’m a Graduate Student, in the Department of Computational and Data Sciences at the Indian Institute of Science, Bangalore working with <a href="http://cds.iisc.ac.in/faculty/yalavarthy/">Professor Phaneendra Yalavarthy</a></em> in the <a href="http://cds.iisc.ac.in/faculty/phani/MIG/index.html">Medical Imaging Group</a></p>
+        </div>
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>M. Tech Computational Data Science</h4>
+          <h5>2019 - Present</h5>
+          <p><em>Indian Institute of Science (IISc), Bangalore, India</em></p>
+          <ul>
+            <li>CGPA : 8.50 / 10, Sem-I and Sem-II</li>
+            <li>Lab: <a href="http://cds.iisc.ac.in/faculty/phani/MIG/index.html">Medical Imaging Group</a></li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h4>B. Tech Mechanical Engineering</h4>
+          <h5>06/2013 - 05/2017</h5>
+          <p><em>Veermata Jijabai Technological Institute (VJTI), Mumbai, India</em></p>
+          <ul>
+            <li>CGPA: 8.40 / 10, Ranked 17th in a class of 70</li>
+            <li>Lab: Statistical Thermodynamics</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item">
+          <h4>Production Engineer, Power Transformers Division</h4>
+          <h5>06/2017 - 12/2017</h5>
+          <p><em>CG Power &amp; Industrial Solution Ltd., Mumbai, India </em></p>
+          <ul>
+            <li>Succesfully implemented IEC 60076 standards as quality baseline in manufacturing and testing of Power Transformers.</li>
+            <li>Supervised the Core-Coil Assembly and Tanking operations for Power Transformers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <h3 class="resume-title">Projects</h3>
+        <div class="resume-item">
+          <h4>MRI to CT Image Modality Translation using Conditional GAN</h4>
+          <h5>01/2020 - 06/2020</h5>
+          <p><em>Department of Computational and Data Sciences, IISc, Bangalore, India</em></p>
+          <ul>
+            <li>Implemented cGAN, commonly used for Image-to-Image Translation in Computer Vision (CV), to synthesize CT scan images given MRI-T1 images. Used smaller network that still achieves performance comparable with State-of-the-Art.</li>
+            <li>Performed hyper-parameter tuning for both networks using grid search strategy for extracting best performance, in terms of PSNR and SSIM, for custom dataset.</li>
+            <li>Observed that adding perceptual loss from VGG-19 and incorporating neighbouring slices improves network performance.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Automatic Evaluation Metrics for Multi-Sentence Text</h4>
+          <h5>01/2020 - 06/2020</h5>
+          <p><em>Department of Computer Science and Automation, IISc, Bangalore, India</em></p>
+          <p><em>Conducted as a part of Machine Learning Course</em></p>
+          
+          <ul>
+            <li>Implemented several common metrics in Natural Language Processing (NLP) like BLEU, ROUGE, BERTScore, Sentence Movers Similarity for evaluating single and multi-sentence text on 3 datasets, namely WMT-18, CNN News, Student Answer Scripts.</li>
+            <li>Performed experiments with various embeddings like GloVe, ELMo, BERT, RoBERTa, with all types of metrics.</li>
+            <li>Cosine Similarity based metrics provided better correlation with humans as compared to metrics based on word matching or Wasserstein distance, for both single-sentence &amp; multi-sentence text.</li>
+          </ul>
+        </div>
+        
+        <div class="resume-item">
+          <h4>Particle Filter for Video based Object Tracking</h4>
+          <h5>01/2020 - 06/2020</h5>
+          <p><em>Department of Computational and Data Sciences, IISc, Bangalore, India</em></p>
+          <p><em>Conducted as a part of Parallel Programming Course</em></p>
+          <ul>
+            <li>Applied the popular state estimation technique called Particle Filter for video based object tracking, and parallelized the algorithm to work on the GPU using OpenCV and C++.</li>
+            <li>Improved the Parallel Resampling algorithm by exploiting non-decreasing property of cumulative distribution function.</li>
+            <li>This increases latency for video based object tracking, since it uses faster technique for resampling</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Design and Analysis of Physical Vapour Deposition system using DSMC for a Binary Mixture of Gases</h4>
+          <h5>05/2016 - 05/2017</h5>
+          <p><em>Mechanical Engineering Department, VJTI, Mumbai, India</em></p>
+          <p><em>Final Year B. Tech Project</em></p>
+          <ul>
+            <li>Performed DSMC simulation of binary mixture of gases, tracking its motion and collisions at low pressure in 3D, using C++.</li>
+            <li>Empirically calculated parameters to maintain flow rate of the primary component in the mixture.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
