@@ -2,6 +2,10 @@
 layout: page
 title: All Posts
 ---
+<ul>
 {% for post in site.posts %}
-    {{ post.date | date_to_string }} » [ {{ post.title }} ]({{ post.url }})
+    <li>
+        <a href = "{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
 {% endfor %}
+</ul>
