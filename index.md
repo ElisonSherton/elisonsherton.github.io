@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-## Hey Everyone!
+# Welcome Everyone!
 
 I am Vinayak Nayak, a Mechanical Engineer currently working as an AI Developer with functional knowledge of Computer Vision, NLP & Machine Learning. 
 
@@ -13,13 +13,18 @@ I also frequently write technical blogs on Medium and you can [see my work here]
 
 I built this personal website as a space where I can share my view, ideas, projects that I dabbled with, and more. Below is a brief resume of sorts to introduce myself.
 
-# EDUCATION
+## EDUCATION
+
 **PGP in Data Science**
+
 *International School of Engineering (INSOFE) [🔗](https://www.insofe.edu.in/)*
+
 *06/2019 – 11/2019 80% Agg., Mumbai, India*
 
 **Bachelor of Technology in Mechanical Engineering**
+
 *Veermata Jijabai Technological Institute [🔗](http://vjti.ac.in/)*
+
 *06/2013 – 06/2017 9.1 CGPA, Mumbai, India*
 
 <!-- <div class="posts">
