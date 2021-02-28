@@ -7,28 +7,24 @@ title: Home
 
 I am Vinayak Nayak, a Mechanical Engineer currently working as an AI Developer with functional knowledge of Computer Vision, NLP & Machine Learning. 
 
-Currently I work at [okkular](https://www.okkular.io/) where I am involved in providing automation solutions in the fashion domain. 
+I built this personal website as a space where I can share my views, ideas, projects that I dabbled with, and more. Below is a brief resume of sorts to introduce myself.
 
-I also frequently write technical blogs on Medium and you can [see my work here](https://nayakvinayak95.medium.com/). 
-
-I built this personal website as a space where I can share my view, ideas, projects that I dabbled with, and more. Below is a brief resume of sorts to introduce myself.
-
-# EDUCATION
+## EDUCATION
 
 <p>
-<h2>PGP in Data Science</h2><br>
-<i>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/">🔗</a></i><br>
+<b>PGP in Data Science</b><br>
+<i>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/" target="_blank">🔗</a></i><br>
 <i>06/2019 – 11/2019 80% Agg., Mumbai, India</i></p>
 
 <p>
-<h2>Bachelor of Technology in Mechanical Engineering</h2><br>
-<i>Veermata Jijabai Technological Institute <a href="http://vjti.ac.in/">🔗</a></i><br>
+<b>Bachelor of Technology in Mechanical Engineering</b><br>
+<i>Veermata Jijabai Technological Institute <a href="http://vjti.ac.in/" target="_blank">🔗</a></i><br>
 <i>06/2013 – 06/2017 9.1 CGPA, Mumbai, India</i></p>
 
 ## WORK EXPERIENCE
 
 <p>
-<h2>AI Developer</h2><br>
+<b>AI Developer</b><br>
 <b>Okkular <a href="https://www.okkular.io/">🔗</a></b><br>
 <i>03/2020 – Present; Mumbai, India</i><br>
 <i>Responsibilities/Tasks</i><br>
@@ -40,16 +36,16 @@ I built this personal website as a space where I can share my view, ideas, proje
 </p>
 
 <p>
-<h2>Data Science Intern</h2><br>
-<b>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/">🔗</a></b><br>
+<b>Data Science Intern</b><br>
+<b>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/" target="_blank">🔗</a></b><br>
 <i>12/2019 – 03/2020; Mumbai, India</i><br>
-<i>Project</i> <a href="https://github.com/ElisonSherton/Image_Captioning">🔗</a><br>
+<i>Project</i> <a href="https://github.com/ElisonSherton/Image_Captioning" target="_blank">🔗</a><br>
 <ul>
 <li>Learnt the merge architecture to use LSTMs and CNNs in conjunction for single image as input to sequence of words as output prediction</li>
 <li>Trained an Image Captioning model from scratch in keras</li>
 <li>Deployed the model using Flask micro-framework</li>
 </ul>
-<i>Contact</i>: <a href="https://in.linkedin.com/in/shreyasi-kalra-36a43511b">Shreyasi Kalra</a>
+<i>Contact</i>: <a href="https://in.linkedin.com/in/shreyasi-kalra-36a43511b" target="_blank">Shreyasi Kalra</a>
 </p>
 
 <!-- <div class="posts">
