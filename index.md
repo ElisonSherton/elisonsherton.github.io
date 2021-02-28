@@ -16,12 +16,12 @@ I built this personal website as a space where I can share my view, ideas, proje
 ## EDUCATION
 
 <p>
-<b>PGP in Data Science<b><br>
+<b>PGP in Data Science</b><br>
 <i>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/">🔗</a></i><br>
 <i>06/2019 – 11/2019 80% Agg., Mumbai, India</i></p>
 
 <p>
-<b>Bachelor of Technology in Mechanical Engineering<b><br>
+<b>Bachelor of Technology in Mechanical Engineering</b><br>
 <i>Veermata Jijabai Technological Institute <a href="http://vjti.ac.in/">🔗</a></i><br>
 <i>06/2013 – 06/2017 9.1 CGPA, Mumbai, India</i></p>
 
