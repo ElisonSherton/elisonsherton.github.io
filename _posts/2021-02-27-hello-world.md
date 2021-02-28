@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello World
+published: true
 ---
 
 # Site Announcement
