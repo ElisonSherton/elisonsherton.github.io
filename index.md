@@ -17,9 +17,8 @@ I built this personal website as a space where I can share my view, ideas, proje
 
 **PGP in Data Science**
 
-*International School of Engineering (INSOFE) [🔗](https://www.insofe.edu.in/)*
-
-*06/2019 – 11/2019 80% Agg., Mumbai, India*
+<p><i>International School of Engineering (INSOFE) [🔗](https://www.insofe.edu.in/)</i><br>
+<i>06/2019 – 11/2019 80% Agg., Mumbai, India</i></p>
 
 **Bachelor of Technology in Mechanical Engineering**
 
