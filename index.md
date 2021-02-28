@@ -51,7 +51,7 @@ I built this personal website as a space where I can share my views, ideas, proj
 <p>
 <b>Intern</b><br>
 <b>Doshaheen Solutions Private Ltd. <a href="https://www.doshaheen.com/" target="_blank">🔗</a></b><br>
-<i>11/2018 – 01/2019 Pune, India</i><br>
+<i>11/2018 – 01/2019; Pune, India</i><br>
 <i>Responsibilities/Tasks:</i>
 <ul>
 <li>Annotated Images of Digital Electric Meters for their readings & units.</li>
@@ -63,7 +63,7 @@ I built this personal website as a space where I can share my views, ideas, proj
 <p>
 <b>Graduate Engineer Trainee</b><br>
 <b>Alfa Laval India Private Ltd. <a href="https://www.alfalaval.in/" target="_blank">🔗</a></b><br>
-<i>08/2017 – 08/2018 Pune, India</i><br>
+<i>08/2017 – 08/2018; Pune, India</i><br>
 <i>Responsibilities/Tasks:</i>
 <ul>
 <li>Handled customer enquiries & quotations for Marine
@@ -72,7 +72,87 @@ Engineering Dept.</li>
 <li>Ideated & implemented a project using VBA to trace the lifecycle of an RFQ (Request for quote) to track the response time of quotations</li>
 </ul>
 <i>Contact</i>: <a href="https://in.linkedin.com/in/amit-desai-b402a015" target="_blank">Amit Desai</a>
+</p><br>
+
+## HACKATHONS & PROJECTS
+
+<p>
+<b>Time Series Forecasting of Indian Stocks <a href="https://medium.com/analytics-vidhya/pytorch-lstms-for-time-series-forecasting-of-indian-stocks-8a49157da8b9" target="_blank">🔗</a></b><br>
+<i>10/2020 – Present</i><br>
+<i>Project</i><a href="https://github.com/ElisonSherton/TimeSeriesForecastingNN" target="_blank">🔗</a><br>
+<ul>
+<li>Extracted historical data of Indian Stocks with <a href="https://nsepy.xyz/" target="_blank">nsepy API</a></li>
+<li>Built an LSTM model in PyTorch for prediction of future stock prices.</li>
+<li>Deployed the model using Streamlit for 1655 stock tickers</li>
+</ul>
 </p>
+
+<p>
+<b>Stock alpha signal prediction @ INSOFE</b><br>
+<i>11/2019 – 11/2019</i><br>
+<i>Project</i><br>
+<ul>
+<li>Estimated alpha signals for NYSE stocks using a classifier</li>
+<li>Used LSTM to extract sentiment scores from tweets for different stock tickers</li>
+<li>- Coupled sentiment score with other provided stockvpredictors to fit an ML model (MLP, Random Forest,XGBoost) to predict alpha signal</li>
+</ul>
+</p>
+
+<p>
+<b>PVD Simulation @ BARC</b> <a href="http://www.barc.gov.in/" target="_blank"></a><br>
+<i>05/2016 – 04/2017</i><br>
+<i>Project</i><br>
+<ul>
+<li>Simulated a PVD system and estimated rate of deposition of metal vapours in an isolated low-pressure chamber</li>
+<li>Utilised the Monte Carlo method for simulation and implemented a C++ script to perform the simulation</li>
+</ul>
+</p><br>
+
+## ACHIEVEMENTS
+
+<p>
+<b>Bhaskaracharya Scholarship @ INSOFE</b> <a href="https://www.insofe.edu.in/" target="_blank">🔗</a><br>
+<i>10/2019 - Present</i><br>
+<i>Awarded INR 1,50,000/- for securing first place in Mid term hackathon and final Project Hackathon organized by INSOFE</i>
+</p>
+
+<p>
+<b>Diamond Jubilee Merit Scholarship @ ACC</b> <a href="https://www.acclimited.com/" target="_blank">🔗</a><br>
+<i>06/2014 - 06/2017</i><br>
+<i>Awarded INR 20,000/- per year by the Associated Cement Company for excellent academic performance of BTech.</i>
+</p>
+
+<p>
+<b>Ranked 4th @ VJTI</b> <a href="http://vjti.ac.in/" target="_blank">🔗</a><br>
+<i>06/2013 - 06/2017</i><br>
+<i>Ranked 4th amongst a batch of 70 people in BTech Mechanical Engineering Batch of 2013.</i>
+</p><br>
+
+## LANGUAGES
+
+<p>
+<b>English</b><br>
+<i>Full Professional Proficiency</i>
+</p>
+
+<p>
+<b>Konkani</b><br>
+<i>Native/Bilingual Proficiency</i>
+</p>
+
+<p>
+<b>Marathi</b><br>
+<i>Native/Bilingual Proficiency</i>
+</p>
+
+<p>
+<b>Hindi</b><br>
+<i>Native/Bilingual Proficiency</i>
+</p><br>
+
+
+
+
 
 <!-- <div class="posts">
   {% for post in paginator.posts %}
