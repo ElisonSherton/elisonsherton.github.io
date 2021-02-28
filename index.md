@@ -37,8 +37,20 @@ I built this personal website as a space where I can share my view, ideas, proje
 <li>Trained NER models to perform keyword extraction for tagging product descriptions</li>
 <li>Conceptualised and implemented novel solutions for similar/alike product recommendation</li>
 </ul>
+</p>
 
-
+<p>
+<b>Data Science Intern</b><br>
+<b>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/">🔗</a></b><br>
+<i>12/2019 – 03/2020; Mumbai, India</i><br>
+<i>Project</i> <a href="https://github.com/ElisonSherton/Image_Captioning">🔗</a><br>
+<ul>
+<li>Learnt the merge architecture to use LSTMs and CNNs in conjunction for single image as input to sequence of words as output prediction</li>
+<li>Trained an Image Captioning model from scratch in keras</li>
+<li>Deployed the model using Flask micro-framework</li>
+</ul><br>
+<i>Contact</i>: <a href="https://in.linkedin.com/in/shreyasi-kalra-36a43511b">Shreyasi Kalra</a>
+</p>
 <!-- <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
