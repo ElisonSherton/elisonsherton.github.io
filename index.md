@@ -7,7 +7,7 @@ title: Home
 
 I am Vinayak Nayak, a Mechanical Engineer currently working as an AI Developer with functional knowledge of Computer Vision, NLP & Machine Learning. 
 
-I built this personal website as a space where I can share my views, ideas, projects that I dabbled with, and more. Below is a brief resume of sorts to introduce myself.
+I built this personal website as a space where I can share my views, ideas, projects that I dabbled with, and more. Below is a brief resume of sorts to introduce myself.<br>
 
 ## EDUCATION
 
