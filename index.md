@@ -15,16 +15,29 @@ I built this personal website as a space where I can share my view, ideas, proje
 
 ## EDUCATION
 
-**PGP in Data Science**
-
-<p><i>International School of Engineering (INSOFE) [🔗](https://www.insofe.edu.in/)</i><br>
+<p>
+<b>PGP in Data Science<b><br>
+<i>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/">🔗</a></i><br>
 <i>06/2019 – 11/2019 80% Agg., Mumbai, India</i></p>
 
-**Bachelor of Technology in Mechanical Engineering**
+<p>
+<b>Bachelor of Technology in Mechanical Engineering<b><br>
+<i>Veermata Jijabai Technological Institute <a href="http://vjti.ac.in/">🔗</a></i><br>
+<i>06/2013 – 06/2017 9.1 CGPA, Mumbai, India</i></p>
 
-*Veermata Jijabai Technological Institute [🔗](http://vjti.ac.in/)*
+## WORK EXPERIENCE
 
-*06/2013 – 06/2017 9.1 CGPA, Mumbai, India*
+<p>
+<b>AI Developer</b><br>
+<b>Okkular <a href="https://www.okkular.io/">🔗</a></b><br>
+<i>03/2020 – Present; Mumbai, India</i><br>
+<i>Responsibilities/Tasks</i><br>
+<ul>
+<li>Developed classifiers to facilitate tagging product images</li>
+<li>Trained NER models to perform keyword extraction for tagging product descriptions</li>
+<li>Conceptualised and implemented novel solutions for similar/alike product recommendation</li>
+</ul>
+
 
 <!-- <div class="posts">
   {% for post in paginator.posts %}
