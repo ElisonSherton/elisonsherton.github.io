@@ -2,7 +2,7 @@
 layout: post
 title: Basics of numpy
 published: true
-categories: The Basics
+categories: Basics
 ---
 
 This post aims to give a brief introduction to some important data structures and basic operations in numpy. Topics covered in this post are as follows:

@@ -2,7 +2,7 @@
 layout: post
 title: Reduction operations in numpy
 published: true
-categories: The Basics
+categories: Basics
 ---
 
 This post is written in succession to my previous post on special arrays in numpy. You may have a look at the same [here](https://elisonsherton.github.io/2020/08/19/special-arrays-in-numpy.html). 
