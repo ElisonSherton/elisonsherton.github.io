@@ -4,7 +4,7 @@ title: Advanced operations with Numpy Arrays
 published: true
 ---
 
-In my previous post, I talk about [Reduction Operations in Numpy Arrays](). You may read through it before you move on to the more Advanced Operations below.
+In my previous post, I talk about [Reduction Operations in Numpy Arrays](https://elisonsherton.github.io//2020/08/26/Reduction-operations-in-numpy.html). You may read through it before you move on to the more Advanced Operations below.
 
 The topics covered in this post are as follows:
 
@@ -13,6 +13,7 @@ The topics covered in this post are as follows:
 - Singular Value Decomposition
 - Inverse of a Matrix
 
+![](https://miro.medium.com/max/1000/0*aJP9CYd9UxI8FWw1)
 ## Introduction
 
 Numpy consists of a subpackage called linalg which has functions particularly pertaining to linear algebra which is an integral part in the working of many DL and ML algorithms. We will discuss several concepts about these operations along with their numpy implementation which will inevitably become a part of your Data Science toolkit. We will be covering three of the most important operations that can be carried out with numpy arrays which are heavily used in DL and ML applications such as Natural Language Processing, Image Retrieval tasks and Customer Recommendation tasks. Without any further delay, let’s get started!
