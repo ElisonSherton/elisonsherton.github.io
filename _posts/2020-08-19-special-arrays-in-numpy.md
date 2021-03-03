@@ -2,6 +2,7 @@
 layout: post
 title: Special Arrays in Numpy
 published: true
+categories: The Basics
 ---
 
 If you’re new to arrays in numpy, I would recommend you first have a look at my [previous post](https://elisonsherton.github.io//2020/08/18/basics-of-numpy.html) here to get accustomed with arrays in numpy and then continue forward.

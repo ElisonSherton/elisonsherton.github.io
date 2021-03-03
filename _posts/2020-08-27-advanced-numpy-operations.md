@@ -2,6 +2,7 @@
 layout: post
 title: Advanced operations with Numpy Arrays
 published: true
+categories: The Basics
 ---
 
 In my previous post, I talk about [Reduction Operations in Numpy Arrays](https://elisonsherton.github.io//2020/08/26/Reduction-operations-in-numpy.html). You may read through it before you move on to the more Advanced Operations below.

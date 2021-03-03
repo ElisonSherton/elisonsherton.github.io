@@ -2,6 +2,7 @@
 layout: post
 title: Exploratory Data Analysis on Anime Data
 published: true
+categories: Visualization
 ---
 
 The focus of this post is to give you an idea of how we can explore data using graphs and gain valuable insights from the same. I will be using the [Anime Recommendations Database dataset](https://www.kaggle.com/CooperUnion/anime-recommendations-database?select=anime.csv) which is available on kaggle publically for performing this analysis. A quick table of contents of the topics covered in the post is as follows.
