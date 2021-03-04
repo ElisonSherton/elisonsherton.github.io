@@ -13,11 +13,13 @@ title: Posts by Tags
 
     <h3 class="category-head">{{ category_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.categories[category_name] %}
-    <article class="archive-item">
-      - <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-    </article>
-    {% endfor %}
+    <ul>
+      {% for post in site.categories[category_name] %}
+      <article class="archive-item">
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+      </article>
+      {% endfor %}
+    </ul>
   </div>
 {% endfor %}
 </div>
