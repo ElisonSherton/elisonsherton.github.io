@@ -5,7 +5,8 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">Written: {{ page.date | date_to_string }} by <i>Vinayak Nayak</i></span>
-  {{page.categories | capitalize | join: ', '}}
+  <span style="float: right; color: brown; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">{{page.categories | capitalize | join: ', '}}</span>
+
   {{ content }}
 </div>
 
