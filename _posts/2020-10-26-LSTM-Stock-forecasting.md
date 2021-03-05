@@ -2,7 +2,7 @@
 layout: post
 title: Time series forecasting of Indian Stocks using LSTMs in PyTorch
 published: true
-categories: 'Deep-Learning', Visualization
+categories: ['Deep Learning', Visualization]
 ---
 
 In this post, we learn how we can predict the trajectory of stocks interactively with a sequence model. The table of contents of this post is as follows
