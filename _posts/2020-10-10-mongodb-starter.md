@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Beginners guide to pymongo to reference mongoDB NoSQL database with python
+title: Beginners guide to pymongo for referencing mongoDB NoSQL database with python
 published: true
 categories: Basics
 ---
