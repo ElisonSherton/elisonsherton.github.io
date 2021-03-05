@@ -66,6 +66,8 @@ Whatsay guys, doesn’t this make sense? Every otaku has at least heard if not s
 
 Just for fun, have a look at the anime which have had a lot of episodes, no doubt Doraemon makes it to the list. Every millenial will remember seeing Doraemon at least once somewhere on TV or poster or merchandise. But with this limited set, we can see that more episodes doesn’t necessarily mean higher rating or vice versa.
 
+<hr>
+
 ## Visual Analysis
 
 > The greatest value of a picture is when it forces us to notice what we never expected to see 
@@ -89,6 +91,8 @@ Following are the different types of charts we will be covering in the subsequen
 - Box Plot and Violin Plot
 - Scatter Plot
 - Heatmaps
+
+<hr>
 
 ## Histograms & Countplots
 
@@ -115,6 +119,8 @@ In members, we can see that there’s certain anime for which there are a lot of
 
 That is why we observed in the describe table that the standard deviation for members is huge compared to the mean of the same as against the standard deviation of rating compared to it’s mean.
 
+<hr>
+
 ### Countplots
 
 Countplots are very similar to histograms with the only difference that they are used for discrete variables. Just as the name suggests, it counts the number of entries for a particular category and simply plots them as bars. Let’s try to visualize the counts of genres to see which genre is the most popular among all anime.
@@ -130,6 +136,8 @@ utils.genre_countplot(data, "genre")
 ![](https://miro.medium.com/max/1440/1*lqkmiUuop-SmlDnx_DcecA.png)
 
 Now looking at this we can see that actually speaking, comedy is the most common genre unlike hentai which was supposedly the most common before we did the preprocessing and plotting.
+
+<hr>
 
 ## Barcharts
 
@@ -150,6 +158,8 @@ Utils.barplot(data, 'type', 'episodes')
 We can see that on an average, the rating is pretty much between 5 and 6 for any type of anime.
 
 However, for TV, the number of episodes seems to be on the higher side of around 35 episodes per anime on an average. For movies, specials and OVA, it is around 1 or 2 and for ONA, it’s around 5 episodes per anime respectively.
+
+<hr>
 
 ## Piecharts
 To visualize the distribution of counts of a categorical variable, we can use piechart as an alternative to countplot to better understand the relative proportions in a percentage-wise manner. Let’s see the pies of types and genres.
@@ -175,6 +185,8 @@ Utils.pieplot(genredata, "genre")
 Looking at the charts above, we can see that when the number of levels in a category is high, the pie-chart is not a good way to visualize the data because the data cannot be aesthetically and semantically analyzed well. Going for the traditional countplot is a good idea then.
 
 However, for a relatively small number of levels, it is quite effective in communicating a percentage split which colloquially strikes close to the understanding of many folks. We can see that TV, OVA and Movies are predominant in the anime industry whereas Specials, ONA and music anime are relatively less in number.
+
+<hr>
 
 ## Boxplot & Violinplots
 
@@ -229,6 +241,8 @@ However, Goman-hiki and Kami Usagi Rope are controversial with 100 and 14 episod
 
 Now, it’s the discretion of the data scientist here whether to consider these records as movies, or series or to drop them completely. No approach is wrong it’s just the thought process of an individual and his way of reasoning to justify the exclusion/inclusion/alteration of records that count here.
 
+<hr>
+
 ### Violinplot
 
 Imagine the best of histogram and boxplot coming together — that’s what violinplots are. The kernel density estimate that we saw in histograms is overlaid on top of the box and whiskers plot. Not only this gives us the median, IQR and whiskers but also an overview of the nature of distribution all in one single plot.
@@ -264,6 +278,8 @@ From the violinplot of members, we can see in addition to most of the data being
 
 On the other hand, when we compare the violin plot of episodes wrt type, most of the types have ridiculously some records with ridiculously large number of episodes for that particular type of anime (as we saw above from the box plot).
 
+<hr>
+
 ## Scatterplots
 
 When we need to study the variation between two continuous variables, we resort to using scatterplots. They help us understand the correlation between these two variables i.e. if one variable increases, does the other increase, decrease or stay unaffected.
@@ -295,6 +311,8 @@ utils.scatterplot(data, "episodes", "rating")
 It does seem that there’s a positive correlation between episodes and rating but it’s not as strong as observed between members and ratings. Also, the 95% CI band is wider for this model which means, the regression line isn’t as good a fit as the one between members and ratings.
 
 This is how we can use scatterplots to gain an understanding of how two quantities vary with respect to one another.
+
+<hr>
 
 ## Heatmap
 
@@ -335,6 +353,8 @@ If we look at the heatmap above, most of them have around 5–6 as their average
 ![](https://miro.medium.com/max/500/1*7vihAw9ons7IZbZfxDP43Q.jpeg)
 
 That’s all for this post folks! Hope you found it useful. The code and other stuff that goes along with this post can be found in my github repo here. EDA and especially plotting are some awesome tools which can help you understand and communicate this understanding well. I hope the plots mentioned here become an invaluable tool in your toolbox for solving data science problems :).
+
+<hr>
 
 ## References & More Reading
 

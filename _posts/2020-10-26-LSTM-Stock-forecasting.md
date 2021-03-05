@@ -156,6 +156,8 @@ This is something that needs extensive hyperparameter tuning and one can go abou
 
 That’s the reason why I built an interactive dashboard using [streamlit](https://www.streamlit.io/). They offer great support to build interactive dashboards using sliders, dropdowns etc.; All without having to know any HTML, CSS and JavaScript which is pretty awesome. Check out [their medium publication here](https://medium.com/streamlit) for more amazing visualization stuff.
 
+<hr>
+
 ## Conclusion
 
 So, that’s it for this post. In this post, we learnt to

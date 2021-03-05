@@ -19,6 +19,8 @@ The topics covered in this post are as follows:
 
 Numpy consists of a subpackage called linalg which has functions particularly pertaining to linear algebra which is an integral part in the working of many DL and ML algorithms. We will discuss several concepts about these operations along with their numpy implementation which will inevitably become a part of your Data Science toolkit. We will be covering three of the most important operations that can be carried out with numpy arrays which are heavily used in DL and ML applications such as Natural Language Processing, Image Retrieval tasks and Customer Recommendation tasks. Without any further delay, let’s get started!
 
+<hr>
+
 ## The Dot Product
 
 In vector algebra, the dot product represnts a scalar quantity obtained by sum aggregating the product of vectors along the n-dimensional space respectively.
@@ -40,6 +42,8 @@ The smaller the angle between the two vectors, more closely aligned the two vect
 
 ![](https://miro.medium.com/max/1000/1*hXlb9yu72y5pvnRd0XW9Ug.jpeg)
 
+<hr>
+
 ## Singular Value Decomposition
 
 This is a concept very commonly used in recommendation systems. Basically, it is used to extract topics or genres or gists of information from a consumer/user/record v/s product/movie/song/feature matrix respectively. (We’ll use user and song respectively in our example).
@@ -59,6 +63,8 @@ By default the number of topics is the same as the number of songs/words in the 
 Numpy doesn’t offer a function to perform truncated SVD. We have to use another library called scikit-learn to do the same; don’t bother much about it, I will cover it in detail a future post. However it’s important to note that truncated SVD is more commonly used because it acts like a tool which can extract meaning from these numbers while compressing the information substantially to a useful state.
 
 If you’re really interested to dig deeper into the topic, I would recommend you read this [post](https://medium.com/@jonathan_hui/machine-learning-singular-value-decomposition-svd-principal-component-analysis-pca-1d45e885e491) which covers svd in great depth with all the math worked out beautifully.
+
+<hr>
 
 ## Inverse of a matrix
 The inverse of a matrix is a matrix such that when it’s multiplied with the matrix itself, we obtain an identity matrix. Now, why is such a matrix useful?
@@ -83,6 +89,8 @@ Well, matrices is an expansive chapter and there’s no end to it. These three o
 The code snippets above can be viewed on my github in this repository [Numpy Explained](https://github.com/ElisonSherton/Numpy-Explained).
 
 Thanks for reading through this entire series of getting to know about Numpy Arrays and hope these tools work in your favour when working on your data science solutions!
+
+<hr>
 
 ## References
 

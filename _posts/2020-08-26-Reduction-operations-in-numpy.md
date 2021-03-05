@@ -37,6 +37,8 @@ But when we go to higher dimensions, we can see the real power of numpy. We can 
 
 ![](https://miro.medium.com/max/700/1*wr1hmNi24zBjsRp3LrXG-g.jpeg)
 
+<hr>
+
 ## Descriptive Stat Reduction Operations
 
 Mean, standard deviation, minimum, maximum etc. are commonly referred to as descriptive statistics of any given dataset and they’re typically obtained using reduction operations — along row, along column, along third dimension, along nth dimension etc. But effectively they involve compressing the data along a dimension to a single unit by giving up on one of the dimensions — hence reduction. These stats give an idea of the distribution of the dataset and features of the dataset which provide an initial insight into the structure of the data.
@@ -67,6 +69,8 @@ Notice the we have always specified the axis argument until now, telling numpy e
 
 There are two more reduction operations which in addition to the above ones which are of great significance especially in Machine Learning and Deep Learning.
 
+<hr>
+
 ## argmax & argmin
 
 Given an array it finds out the index of the maximum or minimum element along a given dimension. Let us consider using the above example itself. Suppose we wanted to find out which student out of the five students scored highest in subject one. We can get the scores for subject one and do an argmax on the same to find this out.
@@ -91,6 +95,8 @@ We can conversely find out which subject did every student performed the best or
 
 > In nearest neighbour search application for eg. picking items similar to a given input item, a distance matrix is calculated and argmin() function helps to find out the nearest neighbours because we’re looking to minimise the distances of the neighbours from the given input item.
 
+<hr>
+
 ## reduce & accumulate operations
 Numpy provides this function in order to reduce an array with a particular operation. The way these functions work are they repeatedly apply the operation over all the elements of an array until only a single element remains.
 
@@ -108,6 +114,8 @@ In this post, we studied about reduction operations in numpy which are very hand
 The code snippets above can be viewed on my github in this repository [Numpy Explained](https://github.com/ElisonSherton/Numpy-Explained).
 
 In our next post we shall talk about some advanced operations in numpy which are commonplace and will inevitably be used by Data Scientists.
+
+<hr>
 
 ## References
 

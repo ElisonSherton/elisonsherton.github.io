@@ -68,6 +68,8 @@ Why use matplotlib.pyplot and not cv2.imshow? There are some inconsistencies wit
 
 So basically we set up two subplots as seen in the gif on the top; one to see the blurred version and another one to actually look at the labels mask which the deeplab model has predicted. We switch on the interactive mode for pyplot and display the image captured directly at the very beginning of the stream. Now, that we have the stage set, let’s discuss the part to obtain predictions from the deeplab-v3 model.
 
+<hr>
+
 ## Deeplab-v3 Segmentation
 The model offered at torch-hub for segmentation is trained on [PASCAL VOC dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/segexamples/index.html) which contains 20 different classes of which the most important one for us is the person class with label 15.
 
@@ -95,6 +97,8 @@ Next, we use opencv’s Gaussian Blur to blue the entire frame output and get a 
 Next, with the help of mask, we replace the background pixels of the frame with the blurred frame’s pixels. Now that we have both the mask and the resulting manipulated frame, we set the data of the two image variables defined in the Setting the stage for output section to these two frames respectively and define an interval for interactive pyplot object for refreshing the frame (think of it as an equivalent of frame rate).
 
 This is how you could use DeepLabv3 for making your very own background blurring feature on custom videos or live vidcams with Image Segmentation.
+
+<hr>
 
 ## Bonus: Background Substitution with custom image
 

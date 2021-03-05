@@ -51,11 +51,15 @@ Let’s have a look at the number of images that we have in train and validation
 
 The dataset looks pretty much balanced with almost a hundred and fifty elements each in train and validation sets. Well, with respect to image standards, this number is pretty low for training a Neural Network classifier. Deep Neural Networks learn good representation functions when there’s a lot of images. A few hundreds or thousands of images per classification label is pretty normal with respect to normal deep learning standards. Over here we have a combined 300 odd images for 27 classes which means we have not more than 10–12 images per class. Let’s see how good a model we can build using this data.
 
+<hr>
+
 ## The fastai DataBlock API
 
 A substantial amount of time is consumed in curating the data in a format suitable to feed to the deep learning model in any application. To simplify this process so that any DL Practitioner can focus on the model building and interpretation more than data curation, fastai came up with the DataBlock API which is excellent at data curation.
 
 Generally, data is structured in one of the following two ways
+
+<hr>
 
 ### The Imagenet Directory Structure
 
@@ -155,6 +159,8 @@ Although in my application everything is neatly labelled, there can be instances
 <hr>
 
 So that’s it for this post guys; I hope you understood the steps to start using fastai for making your own image classifier. It has saved me a lot of time in terms of data preprocessing, model training and model interpretation, particularly in deep learning. Unlike PyTorch where we have to define the Datasets and Dataloader, the datablock API obviates the need for that step as it nicely wraps everything into one function call. Hope you liked the article and thanks for reading through!
+
+<hr>
 
 ## References
 

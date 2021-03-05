@@ -181,6 +181,8 @@ The top score on the leaderboard is around .9885 so our score is somewhat good w
 
 On a closing thought, it is worth mentioning that this dataset as annotated by humans may have been mislabelled or there could have been subjective differences between people which is also fair because it’s a very manual and monotonous job. We could aid that process by building a model, then using it to annotate and have humans supervise the annotations to make the process simpler or crowd-source this work to multiple volunteers to get a large corpus of labelled data in a small amount of time. In any case, NLP has become highly instrumental in tackling many language problems in the real world and hope after reading this post, you feel confident to start your journey in the world of text with fastai!
 
+<hr>
+
 ## References
 - [Toxic Comments dataset from Kaggle](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/overview)
 - [How to use Kaggle API for downloading data](https://medium.com/analytics-vidhya/how-to-fetch-kaggle-datasets-into-google-colab-ea682569851a)

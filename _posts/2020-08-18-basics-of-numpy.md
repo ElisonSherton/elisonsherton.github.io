@@ -39,6 +39,8 @@ Let’s say you have a box of oranges with oranges aligned neatly with their axe
 
 In terms of program, a nested list could be called an array if all elements of all lists are of the same datatype i.e. either int, float, bools, strings or anything. But since we’re doing numerical computation, these types are limited to ints and floats for numpy. And remember that we have to compulsorily wrap it in the np.array function to call it a numpy nd-array object.
 
+<hr>
+
 ## Array Terminologies
 
 ### Rank of an array object
@@ -51,17 +53,23 @@ A rank two array is also called a matrix.
 
 All other arrays are referred to by prepending the rank followed by a D. eg. 3D-array, 4D-array, nD-array etc.
 
+<hr>
+
 ### Axis of an array object
 
 The axis of an array is a specific dimension along that array. The elements of an array are said to run along/across axis of an array. The length of an axis is the number of elements running along that axis.
 
 <img src="https://miro.medium.com/max/700/1*ML4gq5RYtYZbUm0oe0_vmg.png">
 
+<hr>
+
 ### Shape of an array object
 
 The lengths of all the axis together correspond to the shape of an array. If we know the shape of an array, we automatically know the rank and axes as well.
 
 For eg. a 3 X 4 array has rank 2 and the there are two axes which run for a length of 3 and 4 elements respectively.
+
+<hr>
 
 ### Uses of Array Objects
 Now that we know about what arrays are, let’s first understand how & where they’re useful and then go on to study them in more depth.
@@ -74,6 +82,8 @@ To name a few uses of arrays, they’re as follows:
 - Images are represented as either 2-Dimensional (monochromatic) or 3-Dimensional (colored) or 4-Dimensional (colored with transparency) arrays of numbers. Any Deep Learning application needs you to specify the image in one of these formats. What you’re viewing on your screen right now as you read this is a 3-Dimensional/4-Dimensional array being rendered as an image in real-time; that’s how important and underappreciated this data-structure called as an array is!
 
 Now that we know why we need arrays, let’s get our hands dirty and understand how we can use them along with numpy.
+
+<hr>
 
 ## Creating arrays using numpy
 
@@ -100,6 +110,8 @@ print(len(np.shape(x))
 ```
 
 since shape is basically a tuple with the lengths of axes. Apart from this, there are special functions which can create arrays of particular types for eg. An Identity matrix, a diagonal matrix, zeros matrix etc. I will discuss that in a future post.
+
+<hr>
 
 ## Basic Array Operations (Elementwise Operations)
 
@@ -140,6 +152,8 @@ Similarly, the unary operation of negation can simply be performed by adding a m
 The code snippets above can be viewed on my github in this repository [Numpy Explained](https://github.com/ElisonSherton/Numpy-Explained).
 
 In the next post, we will look at some special arrays and functions to create the same. 
+
+<hr>
 
 ## References
 
