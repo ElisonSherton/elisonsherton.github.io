@@ -2,7 +2,7 @@
 layout: post
 title: Toxic comment censoring with multi-label text classification using fastai2
 published: true
-categories: Deep-Learning
+categories: "Deep Learning"
 ---
 
 The internet has become a basic necessity in recent times and a lot of things which happen physically in our world are on the verge of being digitised. Already a substantial proportion of the world population uses the internet for day to day chores, entertainment, academic research etc. It then is a big responsibility to keep the internet a safe space for everyone to come and interact because there are all sorts of people posting stuff on the internet without being conscious of its consequences.

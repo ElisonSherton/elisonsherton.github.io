@@ -2,7 +2,7 @@
 layout: post
 title: Datablocks API & Image Classification with fastai2
 published: true
-categories: Deep-Learning
+categories: "Deep Learning"
 ---
 
 This post goes through describing the amazing datablocks API using fastai2 which makes it extremely convenient to curate and process data for the sake of model training.
