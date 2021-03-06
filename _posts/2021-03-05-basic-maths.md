@@ -13,11 +13,15 @@ This post is built for documentation and self-revision and wouldn't be structure
 
 Also called counting numbers which are used in daily life for counting things. 
 
+<div>
 $$ \mathbb{N} = {1, 2, 3, ....} $$
+</div>
 
 Some people count 0 as a natural number as well and to include that in the notation, they specify a subscript 0 as follows
-    
+
+<div>
 $$ \mathbb{N}_0 = {1, 2, 3, ....} $$
+</div>
 
 However, some others call the set of natural numbers with 0 included as Whole Numbers; so a set difference of Natural Numbers from Whole Numbers will only involve the number 0. 
 
@@ -27,8 +31,10 @@ For the sake of the [IITM Online Degree in Programming and Data Science - Basic 
 
 Natural Numbers with negative numbers included are called Integers.
 
+<div>
 $$ \mathbb{Z} = {..., -3, -2, -1, 0, 1, 2, 3, ...} $$
 $$ x = y^2 $$
+</div>
 
 ## Division Notation
 
