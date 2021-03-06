@@ -28,6 +28,7 @@ For the sake of the [IITM Online Degree in Programming and Data Science - Basic 
 Natural Numbers with negative numbers included are called Integers.
 
 $$ \mathbb{Z} = {..., -3, -2, -1, 0, 1, 2, 3, ...} $$
+$$ x = y^2 $$
 
 ## Division Notation
 
