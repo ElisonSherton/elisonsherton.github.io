@@ -63,7 +63,7 @@ They can be represented in reduced form which is a fraction such that the numera
 
 ## Real Numbers
 
-Numbers which are on the number line but cannot be represented as \\(  \frac{p}{q} \\ are called Irrational Numbers eg. \\(  \sqrt{2} \\), \\(  \PI \\), square roots of not perfect squaresA.
+Numbers which are on the number line but cannot be represented as \\(  \frac{p}{q} \\) are called Irrational Numbers eg. \\(  \sqrt{2} \\), \\(  \PI \\), square roots of not perfect squaresA.
 
 Together, both Irrational and Rational Numbers are called Real Numbers and they're denoted as \\( \mathbb{R} \\). Real numbers are also dense by same logic as Rational Numbers.
 
