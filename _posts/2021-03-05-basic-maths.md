@@ -16,7 +16,7 @@ Also called counting numbers which are used in daily life for counting things.
 $$ \mathbb{N} = {1, 2, 3, ....} $$
 
 Some people count 0 as a natural number as well and to include that in the notation, they specify a subscript 0 as follows
-
+    
 $$ \mathbb{N}_0 = {1, 2, 3, ....} $$
 
 However, some others call the set of natural numbers with 0 included as Whole Numbers; so a set difference of Natural Numbers from Whole Numbers will only involve the number 0. 

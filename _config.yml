@@ -10,7 +10,8 @@ author:
   url:            https://twitter.com/ElisonSherton
 
 paginate:         5
-
+kramdown:
+  math_engine: katex
 # Custom vars
 version:          2.1.0
 
