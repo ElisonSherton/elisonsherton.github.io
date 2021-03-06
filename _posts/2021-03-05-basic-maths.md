@@ -30,13 +30,10 @@ Natural Numbers with negative numbers included are called Integers.
 
 \\[ \mathbb{Z} = {..., -3, -2, -1, 0, 1, 2, 3, ...} \\]
 
-\\[ x = y^2 \\]
-
-
 ## Division Notation
 
 If `a` divides `b` evenly i.e. no remainder, it is denoted as `a | b`.
 
 Alternatively we call `a` as a factor of b.
 
-If `a` doesn't divide `b`, we notate this as $x\nmid y$
+If `a` doesn't divide `b`, we notate this as \\[ x\nmid y$ \\]
