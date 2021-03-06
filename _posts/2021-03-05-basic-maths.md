@@ -59,6 +59,16 @@ They can be represented in reduced form which is a fraction such that the numera
 
 > For every integer we have the concept of a next and previous integer but nothing of such sort exists in Rationals. Because given any two numbers, there'll always be an average number in between them.
 
-** \\(  \therefore \\) Rationals are dense, integers are discrete**
+**\\(  \therefore \\) Rationals are dense, integers are discrete**
+
+## Real Numbers
+
+Numbers which are on the number line but cannot be represented as \\(  \frac{p}{q} \\ are called Irrational Numbers eg. \\(  \sqrt{2} \\), \\(  \PI \\), square roots of not perfect squaresA.
+
+Together, both Irrational and Rational Numbers are called Real Numbers and they're denoted as \\( \mathbb{R} \\). Real numbers are also dense by same logic as Rational Numbers.
+
+
+
+
 
 
