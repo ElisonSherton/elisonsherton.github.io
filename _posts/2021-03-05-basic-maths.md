@@ -2,7 +2,7 @@
 layout: post
 title: Numbers
 published: true
-categories: [Mathematics, Basics]
+categories: [Mathematics]
 ---
 
 This post is built for documentation and self-revision and wouldn't be structured very well. It is written with the intent to remember basic concepts of mathematics which will inevitably be needed to study any discipline which involves quantitative analysis.
