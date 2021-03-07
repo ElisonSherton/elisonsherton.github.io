@@ -3,6 +3,8 @@ layout: page
 title: Resume
 ---
 
+<a href="https://drive.google.com/file/d/1maJGA3u6bTfKOyqoMBxiFwFwtmHVj2Ak/view" target="_blank">Download this resume here</a>
+
 ## EDUCATION
 
 <p>
