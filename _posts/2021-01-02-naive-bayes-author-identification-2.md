@@ -228,4 +228,4 @@ I hope you enjoyed reading the post above as much as I did when writing the same
 1. [NLP with classification & vector spaces — Deeplearning.ai](https://www.coursera.org/learn/classification-vector-spaces-in-nlp)
 2. [Github code for the above post](https://github.com/ElisonSherton/rogers-stark-classification)
 3. [Naive Bayes & Regex by Rachel Thomas](https://www.youtube.com/watch?v=Q1zLqfnEXdw)
-4. [Previous Post on Data Collection for Author Identification with Naive Bayes](https://medium.com/swlh/author-identification-using-naive-bayes-algorithm-1-abeeb88eb862)
+4. [Previous Post on Data Collection for Author Identification with Naive Bayes](https://elisonsherton.github.io//machine%20learning/2021/01/01/naive-bayes-author-identification-1.html)
