@@ -88,9 +88,9 @@ In the above equation, every term has a particular connotation associated with i
 
 > P(B) — Prior probability of predictor B
 
-> P(B | A) — Likelihood i.e. probability of predictor given class
+> P(B \| A) — Likelihood i.e. probability of predictor given class
 
-> P(A | B) — Posterior probability of class given predictor
+> P(A \| B) — Posterior probability of class given predictor
 
 Bayes Rule is a very useful construct when it comes to conditional probability because in most of the cases we know the conditional probability one way but not the other (for many practical reasons) and this rule helps us figure/ realistically estimate the reverse conditional probability.
 
