@@ -85,13 +85,16 @@ or after restructuring
 In the above equation, every term has a particular connotation associated with it:
 
 > P(A) — Prior probability of class A
+
 > P(B) — Prior probability of predictor B
+
 > P(B | A) — Likelihood i.e. probability of predictor given class
+
 > P(A | B) — Posterior probability of class given predictor
 
 Bayes Rule is a very useful construct when it comes to conditional probability because in most of the cases we know the conditional probability one way but not the other (for many practical reasons) and this rule helps us figure/ realistically estimate the reverse conditional probability.
 
-For eg. in a disease diagnostic experiment, we can estimate P(positive| disease) by doing tests on people who are only actually suffering, but finding out P(disease| positive) cannot be really calculated because testing the entire population will just be too costly & futile; especially if the disease is less prevalent.
+For eg. in a disease diagnostic experiment, we can estimate P(positive\| disease) by doing tests on people who are only actually suffering, but finding out P(disease\| positive) cannot be really calculated because testing the entire population will just be too costly & futile; especially if the disease is less prevalent.
 
 In our case, the rule will be
 
@@ -170,7 +173,7 @@ There’s two potential problems which we can run into if we use the modified fo
 
 ### Division by zero
 
-In the denominator which contains terms like P(word|class), it’s possible that some probability terms evaluate to zero like in the above example we saw P(need | Iron Man) = 0.
+In the denominator which contains terms like P(word\|class), it’s possible that some probability terms evaluate to zero like in the above example we saw P(need \| Iron Man) = 0.
 
 To not encounter such problems, we could use Laplacian smoothing which modifies the conditional probability definition as follows:
 
