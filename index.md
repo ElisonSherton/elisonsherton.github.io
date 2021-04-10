@@ -15,7 +15,7 @@ I enjoy solving vision problems like Image Classification, Image Retrieval (Cont
 
 Besides that, I really love watching anime especially from the `shounen`, `sports` and  `slice of life` genres. By far, [Kuroko no basket](https://myanimelist.net/anime/11771/Kuroko_no_Basket) and [Haikyuu](https://myanimelist.net/anime/20583/Haikyuu) are really at the top amongst my list of most favorite anime! Apart from watching anime, I also enjoy reading light novels and short stories which irrespective of being fiction or otherwise incite thoughts in me and give a new perspective to view life.
 
-I hope you'll enjoy reading my posts and if you do, I would love to hear your reactions and take constructive criticism to improve my content and evolve. We're all always learning aren't we :blush! 
+I hope you'll enjoy reading my posts and if you do, I would love to hear your reactions and take constructive criticism to improve my content and evolve. We're all always learning aren't we :blush: ! 
 
 <!-- <div class="posts">
   {% for post in paginator.posts %}
