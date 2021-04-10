@@ -116,7 +116,7 @@ What I did is I created a project and copied the contents of my excel file which
 
 Now comes the meat of the code which you need for automating your project. In this, you could access any cell from any sheet from the `xlsm` workbook above. 
 
-You can write any number of custom functions like in any other python script and use them here. I have written my code inside of the main function which I am going to use for updating the daily closing prices. I have given the code below in chunks for understanding purposes. You could look at the [complete code at once here]().
+You can write any number of custom functions like in any other python script and use them here. I have written my code inside of the main function which I am going to use for updating the daily closing prices. I have given the code below in chunks for understanding purposes. You could look at the [complete code at once here](https://github.com/ElisonSherton/Shares_Closing_Updater).
 
 ```python
 import xlwings as xw
