@@ -7,7 +7,9 @@ categories: ['fastbook', 'Deep Learning']
 
 # Introduction
 
-This post is aimed to summarise what I learned from the `fastbook reading session` with [Aman Arora](https://twitter.com/amaarora) from [Weights & Biases](https://twitter.com/weights_biases). It is a study group which has come into effect thanks to the collective effort of Aman and the organization weights and biases which I am really grateful to. 
+This post is aimed to summarise what I learned from the `fastbook reading session` with [Aman Arora](https://twitter.com/amaarora) from [Weights & Biases](https://twitter.com/weights_biases). It is a study group which has come into effect thanks to the collective effort of Aman and the organization Weights and Biases for which I am really grateful. The entire session is recorded and can be viewed below
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rmOqCO7c8pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This post summarises the contents of week 3 with the help of a personal project that I did to replicate the concepts taught in this session. I hope you find this helpful :) 
 
@@ -106,15 +108,17 @@ So we now have a fully workable dataset which we can use to train a SOTA Deep Le
 
 What we see as images on our screens are interpreted by the computer as matrices of decimal numbers. So, in order to load the images into a way that the computer can understand fastai provides couple of classes: the `DataBlock` and the `DataLoader`. It is essential to understand these two classes in detail to be able to feed our data to the model and let it do it's weight updates and come up with a function that approximates the relation between inputs (images) to the outputs (targets).
 
-First then let's understand what a `DataBlock` is. A `DataBlock` is a template which tells the following four things.
+First then let's understand what a `DataBlock` is.
 
 ## Datablock
 
-1. **blocks:**  What are our inputs and outputs. For image classification, we are mapping an image to a category. So our input will be an `ImageBlock` and our output will be a `CategoryBlock`. For text classification, we would do a text-category mapping so it will have `TextBlock` as the input and `CategoryBlock` as the output. If we wish to have multiple inputs, we can do that by passing a tuple/list as the first element of the blocks tuple; same for output. For eg. if we wish to pass two images and see if they're same or different in some aspect, we can have `blocks = ([ImageBlock, ImageBlock], CategoryBlock)`. 
+ A `DataBlock` is a template which tells the dataloader which will finally use this datablock, the following five things.
 
-2. **get_items**: We have to tell how to get the input. fastai has a prebuilt function `get_image_files` which gets all the images in a folder and it's sub folders (well, most common `.png`, `.jpg` formats etc. are considered. `.webp` etc. aren't) into a list.
+- **blocks:**  What are our inputs and outputs. For image classification, we are mapping an image to a category. So our input will be an `ImageBlock` and our output will be a `CategoryBlock`. For text classification, we would do a text-category mapping so it will have `TextBlock` as the input and `CategoryBlock` as the output. If we wish to have multiple inputs, we can do that by passing a tuple/list as the first element of the blocks tuple; same for output. For eg. if we wish to pass two images and see if they're same or different in some aspect, we can have `blocks = ([ImageBlock, ImageBlock], CategoryBlock)`. 
 
-3. **splitter**: Any Machine Learning model given enough data can perfectly approximate a set of inputs to a set of outputs by memorizing it. However it will not perform well during runtime because it has not learnt the underlying concept and simply memorized the connection of input to output. So this basically specifies the way of splitting. For that fastai has it's own set of splitters which could be used. The most common is the `RandomSplitter` which takes a validation percentage and splits that much percentage into the validation set and remaining into the training set.
+- **get_items**: We have to tell how to get the input. fastai has a prebuilt function `get_image_files` which gets all the images in a folder and it's sub folders (well, most common `.png`, `.jpg` formats etc. are considered. `.webp` etc. aren't) into a list.
+
+- **splitter**: Any Machine Learning model given enough data can perfectly approximate a set of inputs to a set of outputs by memorizing it. However it will not perform well during runtime because it has not learnt the underlying concept and simply memorized the connection of input to output. So this basically specifies the way of splitting. For that fastai has it's own set of splitters which could be used. The most common is the `RandomSplitter` which takes a validation percentage and splits that much percentage into the validation set and remaining into the training set.
 
 If you have a folder structure like this, i.e. your train and validation folders are explicitly defined in the structure shown below, you can choose to use the `GrandparentSplitter`
 
@@ -137,9 +141,9 @@ cartoons
 
 By default the `GrandparentSplitter` assumes your training set is called `train` and your validation set is called `valid`. If that's not the case you can instantiate grandparent splitter by explicitly specifying the names of your folders respectively.
 
-4. **get_y**: This is to specify how do you want your model to decipher the category which should be assigned to the input in the ImageBlock. If you have a folder structure like above, you know that in the path of the items, the penultimate item in the path is always the class name, when that's the case you can use the `parent_label` function which is provided in fastai to specify that's where we need to pick the targets from.
+- **get_y**: This is to specify how do you want your model to decipher the category which should be assigned to the input in the ImageBlock. If you have a folder structure like above, you know that in the path of the items, the penultimate item in the path is always the class name, when that's the case you can use the `parent_label` function which is provided in fastai to specify that's where we need to pick the targets from.
 
-5. **item_tfms**:  When we download images from the web, we observe that not all of them are of the same resolution. Some are thumbnails, some are gigantic poster sized images, some are reasonably good resolution images etc. But when we feed our data to the model we need to make sure they're all the same size because we need to be able to batch them together and send it to the model for training. This is where this *item_tfms* comes in handy. If you want to manipulate your input before actually sending it to the model, you can do it here. We just use a `Resize` to basically ensure that what goes in is consistent. Also there's several ways to resize a picture like `squish, pad, random, crop etc.` but with this default method we do a `CenterCrop` for resizing the images.
+- **item_tfms**:  When we download images from the web, we observe that not all of them are of the same resolution. Some are thumbnails, some are gigantic poster sized images, some are reasonably good resolution images etc. But when we feed our data to the model we need to make sure they're all the same size because we need to be able to batch them together and send it to the model for training. This is where this *item_tfms* comes in handy. If you want to manipulate your input before actually sending it to the model, you can do it here. We just use a `Resize` to basically ensure that what goes in is consistent. Also there's several ways to resize a picture like `squish, pad, random, crop etc.` but with this default method we do a `CenterCrop` for resizing the images.
 
 Now, we're finally ready to define our datablock below.
 
@@ -270,7 +274,7 @@ btn_run.on_click(on_click_classify)
 
 Then we can host the notebook along with `requirements.txt`, `export.pkl` and an optional `README.md` file to github and create an app on binder which can be accessed by anyone for doing prediction. Here is a working example of the app that I created with the above model.
 
-![](https://i.imgur.com/0nKHLTP.mp4)
+![](https://i.imgur.com/7M6FBKH.gif)
 
 >**Note that when you make a repo for hosting these files, do not keep the files in a separate folder in the repo; let it be at the root level only otherwise the app will not build as expected on binder.**
 
@@ -283,3 +287,10 @@ Then we can host the notebook along with `requirements.txt`, `export.pkl` and an
 
 
 If you're still with me, thanks for reading through. I appreciate your patience and hope this post helped you get started with the fastai library for image classification. I would be glad to [connect with you on Twitter](https://twitter.com/ElisonSherton) or in the discussion below should you have any doubts or suggestions for improvements :)
+
+# References
+
+1. [fastbook chapter 2](https://github.com/fastai/fastbook/blob/master/02_production.ipynb)
+2. [Session link](https://www.youtube.com/watch?v=rmOqCO7c8pw)
+3. [Understanding confusion matrix](https://medium.com/swlh/classification-metrics-and-the-confusion-matrix-3e35581c1153#89ea)
+4. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch2Production)
