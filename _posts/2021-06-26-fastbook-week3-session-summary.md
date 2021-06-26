@@ -197,7 +197,7 @@ learn.fine_tune(8, freeze_epochs = 3)
 
 We first create a `cnn_learner` using the `resnet18` model architecture which is a function having some weights that get updated based on a performance metric on the data relayed to it by `dls`.
 
-We then use the `learn.fine_tune` method by freezing the epochs to some fixed number of epochs and then running by unfreezing for remaining epochs and training the model. On the fastbook slack, there's a really beautiful answer by [Henry here](https://wb-forum.slack.com/archives/C023P7TM1DK/p1624370132315400?thread_ts=1624263184.301900&cid=C023P7TM1DK) explaining the importance of fine tuning for a pretrained model. 
+We then use the `learn.fine_tune` method by freezing the epochs to some fixed number of epochs and then running by unfreezing for remaining epochs and training the model. On the fastbook slack, there's a really beautiful answer by [Henrik here](https://wb-forum.slack.com/archives/C023P7TM1DK/p1624370132315400?thread_ts=1624263184.301900&cid=C023P7TM1DK) explaining the importance of fine tuning for a pretrained model. 
 
 As we see by the end of 11 epochs, we're at 75% accuracy with just close to 200 images per class with so much variance in within the class. Not bad at all, isn't it :)? especially considering such few lines of code that we've written...
 
@@ -217,7 +217,7 @@ If we look at the images which are misclassified there's some semblance of shinc
 
 Finally, we can save this model weights to a file by calling an `.export` method which creates a file named export.pkl in same directory as the notebook. This contains all the necessary elements for making inference at the run time.
 
-# The Final Mile: Building an app from the model
+# The Final Mile: Building an app for using the model in inference
 
 Now that we have made a classifier which can tell 4 different cartoons apart, let's make it usable i.e. deploy it to share it with friends and family. 
 
