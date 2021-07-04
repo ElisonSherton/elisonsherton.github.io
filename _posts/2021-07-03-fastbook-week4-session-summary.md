@@ -11,7 +11,7 @@ In this post, I wish to summarize what I learned from the fastbook session on th
 
 The session is available for streaming on YouTube and below's the link for the same.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jK0yp2mPRic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="700" height="400" src="https://www.youtube.com/embed/jK0yp2mPRic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > During the session, we built a 3s v/s 7s classifier on a sample of the MNIST dataset. There were many suggestions on how we could tackle this problem easily without any deep learning. In the remainder of the post I have tried to implement a couple of suggestions by [Ravi Mashru](https://twitter.com/ravimashru) and [Javier C](https://wandb.ai/candeira) to play with `torch tensors`, `numpy arrays` and `PIL Image` libraries. 
 
@@ -394,12 +394,12 @@ Handwritten digits are different from digital ones in the way that
 
 These are several reasons why our simplistic traditional approaches didn't work so well... However, it was indeed fun to implement them and I hope you had fun reading them as well! :)  I would be glad to [connect with you on Twitter](https://twitter.com/ElisonSherton). If you have any comments/suggestions/thoughts, feel free to comment below or reach out to me on Twitter. 
 
-Thanks for reading! If you liked what you read, you can check out my other posts [here](https://elisonsherton.github.io/categories.html).
+Thanks for reading! If you liked what you read, feel free to check out [my other posts here.](https://elisonsherton.github.io/categories.html).
 
 
 # References
 
-1. [fastbook chapter 2](https://github.com/fastai/fastbook/blob/master/04_mnist_basics.ipynb)
-2. [Session link](https://www.youtube.com/watch?v=jK0yp2mPRic)
+1. [fastbook chapter 4](https://github.com/fastai/fastbook/blob/master/04_mnist_basics.ipynb)
+2. [wandb fastbook sessions link](https://www.youtube.com/watch?v=jK0yp2mPRic)
 3. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch4MNIST_basics)
 4. [wandb forums for week 4](https://wandb.ai/aarora/discussions/Fastbook-Reading-Group-Week-4--Vmlldzo4MTczMDA?galleryTag=forum)

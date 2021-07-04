@@ -9,7 +9,7 @@ categories: ['fastbook', 'Deep Learning']
 
 This post is aimed to summarise what I learned from the `fastbook reading session` with [Aman Arora](https://twitter.com/amaarora) from [Weights & Biases](https://twitter.com/weights_biases). It is a study group which has come into effect thanks to the collective effort of Aman and the organization Weights and Biases for which I am really grateful. The entire session is recorded and can be viewed below
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rmOqCO7c8pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="700" height="400" src="https://www.youtube.com/embed/rmOqCO7c8pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This post summarises the contents of week 3 with the help of a personal project that I did to replicate the concepts taught in this session. I hope you find this helpful :) 
 
