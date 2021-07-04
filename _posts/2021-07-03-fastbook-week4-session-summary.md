@@ -15,7 +15,7 @@ The session is available for streaming on YouTube and below's the link for the s
 
 > During the session, we built a 3s v/s 7s classifier on a sample of the MNIST dataset. There were many suggestions on how we could tackle this problem easily without any deep learning. In the remainder of the post I have tried to implement a couple of suggestions by [Ravi Mashru](https://twitter.com/ravimashru) and [Javier C](https://wandb.ai/candeira) to play with `torch tensors`, `numpy arrays` and `PIL Image` libraries. 
 
-**Caveat: The classification results aren't impressive, in fact they're worse than a flip of coin but I had fun implementing them and would like to share it anyways.**
+**Caveat: The classification results aren't impressive, in fact they're worse than the flip of coin but I had fun implementing them and would like to share it anyways.**
 
 # Images from the perspective of Computers
 
@@ -57,7 +57,7 @@ We could very easily build a convolutional neural network as we saw in the past 
 
 # Javier C's Suggestion
 
-![](https://imgur.com/91Lokr5)
+<img src="https://imgur.com/91Lokr5">
 
 If we look at how a 3 is written vs how a 7 is written using a pen, put a fixed size box around it, and look at the area occupied by the ink needed to write the digit, we would notice that 3 takes more ink than a 7.
 
@@ -189,7 +189,7 @@ Once we have this function, we can run it through all the images in the validati
 
 # Ravi Mashru's Suggestion
 
-![](https://imgur.com/DJa8FC2)
+<img src="https://imgur.com/DJa8FC2">
 
 This was indeed a very nice observation by [Ravi Mashru](https://twitter.com/ravimashru). If we observe a three as typed on a computer/keyboard, it is indeed the case that a 3 would be symmetric along the horizontal axis and a 7 wouldn't. 
 

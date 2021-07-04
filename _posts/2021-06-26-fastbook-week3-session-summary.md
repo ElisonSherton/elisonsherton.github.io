@@ -1,6 +1,6 @@
 ---
 layout: post
-title: W&B Fastbook Sessions Week3 Summary
+title: W&B Fastbook Sessions Week 3 Summary
 published: true
 categories: ['fastbook', 'Deep Learning']
 ---
