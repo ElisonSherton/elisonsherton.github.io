@@ -59,7 +59,7 @@ We could very easily build a convolutional neural network as we saw in the past 
 
 If we look at how a 3 is written vs how a 7 is written using a pen, put a fixed size box around it, and look at the area occupied by the ink needed to write the digit, we would notice that 3 takes more ink than a 7.
 
-![](https://imgur.com/91Lokr5)
+![Imgur](https://i.imgur.com/91Lokr5.png)
 
 In geometrical terms, this means the inked region occupies a larger surface area when writing a 3 vs writing a 7. Let us use this heuristic to build a univariate model for classifying if the given image is a 3 or a 7.
 
@@ -138,7 +138,7 @@ sns.distplot(train_7s_sa, ax = ax)
 ax.legend(["threes_distribution", "sevens_distribution"], bbox_to_anchor=(1, 0.75));
 ```
 
-![](https://imgur.com/zFZGrAK)
+![Imgur](https://i.imgur.com/zFZGrAK.png)
 
 We can see in the plot above that there's no clean separation between the two distributions. The threes and sevens distribution are heavily intersecting in the `0.1-0.3` range. If they were cleanly separable, this could've been a very good heuristic to classify images of 3s from those of 7s but we'll work with what we have and see how our classifier performs...
 
@@ -191,7 +191,7 @@ Once we have this function, we can run it through all the images in the validati
 
 There was a very nice observation made by [Ravi Mashru](https://twitter.com/ravimashru). If we observe a three as typed on a computer/keyboard, it is indeed the case that a 3 would be symmetric along the horizontal axis and a 7 wouldn't. 
 
-![](https://imgur.com/DJa8FC2)
+![Imgur](https://i.imgur.com/DJa8FC2.png)
 
 
 > Imagine if you had a three on a piece of paper very nicely written in a box, then if you fold this paper along the horizontal axis, *the two curves in the digit three would completely overlap over one another.* However if you do the same *with the number seven, you would get a grad sign or an inverted triangle symbol*.
@@ -265,7 +265,7 @@ def visualize(img_pth: Path, binarize: bool = False):
 
 Using this function if we randomly plot a three and a seven, they look as follows
 
-![](https://imgur.com/vbGwVoB)
+![Imgur](https://i.imgur.com/vbGwVoB.png)
 
 As we can see the components of threes tend to overlap over one another in the same positions but the components of seven have little to no overlap. We can measure the extent of this overlap by computing a box to box distance between the corresponding boxes of both the top half and the bottom flipped half images.
 
@@ -298,7 +298,7 @@ sns.distplot(train_7s_dists, ax = ax)
 ax.legend(["threes_distribution", "sevens_distribution"], bbox_to_anchor=(0.65, 0.75));
 ```
 
-![](https://imgur.com/0W4Z8e2)
+![Imgur](https://i.imgur.com/0W4Z8e2.png)
 
 Whoa! This is unbelievable right? Both the distributions almost overlap each other. How in the world could this happen? What can we do to better this? As a last try, we can try binarization on our training data and do a similarity comparison instead of a distance comparison.
 
@@ -310,7 +310,7 @@ Then in the flipped and top halves of the images, we can compute the similarity 
 
 First, let's visualize the binarized images to understand how they're different from the original ones
 
-![](https://imgur.com/0goVA4K)
+![Imgur](https://i.imgur.com/0goVA4K.png)
 
 As you can see in the original there's a different illumination associated with each number in a box, however in the binarized version it's all the same i.e. uniform illumination throughout the number.
 
@@ -359,7 +359,7 @@ The computation of similarity is involved. We first add the two binarized sectio
 
 If we do a similar exercise as the above two cases and plot a distribution of the two classes, we get something as follows
 
-![](https://imgur.com/9ZiPUZG)
+![Imgur](https://i.imgur.com/9ZiPUZG.png)
 
 As we hypothesized, the mean of threes is higher than that of sevens which means our intuition was right. However, threes also has a larger standard deviation and has a flatter distribution. This means that the threes' images we're encountering are more diverse in nature than the sevens' images.
 
@@ -372,15 +372,15 @@ If we adopt a similar prediction logic as the one described in surface area illu
 
 To understand this, we will have to understand the data properly. MNIST dataset contains handwritten digit images, not digital images. Let's have a look at computer printed 3s and 7s i.e. digital 3s and 7s
 
-![](https://imgur.com/HDVTLHy)
+![Imgur](https://i.imgur.com/HDVTLHy.png)
 
 As seen they're very clean and have nicely demarcated boundaries. If we run visualize the top, bottom and bottom flipped components, we can see that in case of threes there's a perfect overlap whereas for seven there's very little overlap and the overlaid figure forms a triange as we discussed in the beginning of the previous section.
 
-![](https://imgur.com/bT2OUE4)
+![Imgur](https://i.imgur.com/bT2OUE4.png)
 
 After binarizing, this becomes even more evident as seen below.
 
-![](https://imgur.com/VZLDBUR)
+![Imgur](https://i.imgur.com/VZLDBUR.png)
 
 On these images, our distance computation yields very different results for 3s and 7s respectively and our univariant estimate can be a decent variable to distinguish the two classes apart.
 
