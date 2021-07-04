@@ -59,7 +59,7 @@ We could very easily build a convolutional neural network as we saw in the past 
 
 If we look at how a 3 is written vs how a 7 is written using a pen, put a fixed size box around it, and look at the area occupied by the ink needed to write the digit, we would notice that 3 takes more ink than a 7.
 
-<img src="https://imgur.com/91Lokr5">
+![](https://imgur.com/91Lokr5)
 
 In geometrical terms, this means the inked region occupies a larger surface area when writing a 3 vs writing a 7. Let us use this heuristic to build a univariate model for classifying if the given image is a 3 or a 7.
 
@@ -191,7 +191,7 @@ Once we have this function, we can run it through all the images in the validati
 
 There was a very nice observation made by [Ravi Mashru](https://twitter.com/ravimashru). If we observe a three as typed on a computer/keyboard, it is indeed the case that a 3 would be symmetric along the horizontal axis and a 7 wouldn't. 
 
-<img src="https://imgur.com/DJa8FC2">
+![](https://imgur.com/DJa8FC2)
 
 
 > Imagine if you had a three on a piece of paper very nicely written in a box, then if you fold this paper along the horizontal axis, *the two curves in the digit three would completely overlap over one another.* However if you do the same *with the number seven, you would get a grad sign or an inverted triangle symbol*.
