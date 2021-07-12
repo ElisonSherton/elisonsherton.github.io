@@ -240,8 +240,8 @@ out_pl = widgets.Output()
 
 - A label on which we can write the name of the predicted class and the confidence score for the prediction
 ```python
-# Create a widget to display the output
-out_pl = widgets.Output()
+# Create a widget to display the label for prediction
+lbl_pred = widgets.Output()
 ```
 
 - A button which when clicked gets the prediction, clears the output, overlays the most recent input image on the output and updates the label to reflect the latest prediction.
