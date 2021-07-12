@@ -80,7 +80,7 @@ Since we've assumed to fit a quadratic function the above formula is pretty spec
 
 <br>
 
-## Loss Computation
+## 3. Loss Computation
 
 This is the most essential part of the process. Selecting a loss function and computing the same given inputs and expected outputs. We get the predictions as above and then compare them with the actual values. The delta between the two i.e. how far are my predictions from actual values can be computed using a loss function.
 
@@ -94,7 +94,7 @@ loss = rmse_loss(preds, speeds)
 
 <br>
 
-## Gradient Computation
+## 4. Gradient Computation
 
 A gradient or a derivative is a quantity which indicates given the loss and the way it was computed after doing all those computations using the weights on inputs, what is the direction to step in the space of weights so that the loss can be optimized.
 
@@ -112,7 +112,7 @@ weights.grad
 
 <br>
 
-## Step -> Weight Updation
+## 5. Step -> Weight Updation
 
 Now that we have all pieces in place, we can use the gradients to take step in the direction of the steepest descent so as to approach the minimum value in the loss function landscape. 
 
@@ -296,7 +296,7 @@ Epoch loss: 41.78349
 
 As we see, by breaking the entire data into batches of 64 datapoints, we can also get pretty decent results comparable to the actual gradient descent. In a batch, notice that the losses are very different for each batch. 
 
-> To imitate Orwell, not all data is equal; so if you look across different batches, for the state of the weights at that time, there's some datapoints whose outputs can be estimated close to the targets eg. batch 7 in epoch 25 as against some others eg. batch 1 in epoch 25.
+> To quote Orwell, not all data is equal; so if you look across different batches, for the state of the weights at that time, there's some datapoints whose outputs can be estimated close to the targets eg. batch 7 in epoch 25 as against some others eg. batch 1 in epoch 25.
 
 > This means in comparison to original Gradient Descent, we're taking more steps in reaching the minima and our training will be more jagged because batching will lead to separation of anomalous data from the regular ones and it can throw our training off to some degree...
 
