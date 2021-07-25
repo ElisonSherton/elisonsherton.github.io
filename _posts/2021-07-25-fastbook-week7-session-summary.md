@@ -28,7 +28,8 @@ In the words of [Arthur Samuel](https://en.wikipedia.org/wiki/Arthur_Samuel), an
 
 If we simply use the gradient value as is, there is an issue. We would most probably go around haphazardly without ever approaching a local minima in the loss landscape. The picture below summarizes this beautifully
 
-![](https://imgur.com/1ZPQw1l)
+![Imgur](https://imgur.com/1ZPQw1l)
+
 [Source: Kaggle Notebook](https://www.kaggle.com/residentmario/tuning-your-learning-rate)
 
 
