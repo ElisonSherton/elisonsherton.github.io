@@ -20,7 +20,7 @@ Without any further ado, let's get started.
 
 # A brief refresher on Learning Rate
 
-I talked about the concept of `Learning Rate` in this [post](https://elisonsherton.github.io//fastbook/deep%20learning/2021/07/10/fastbook-week5-session-summary.html) so feel free to check that out but for now, let's understand from a 10000 feet overview what it is.
+I talked about the concept of `Learning Rate` in this [post](https://elisonsherton.github.io//fastbook/deep%20learning/2021/07/10/fastbook-week5-session-summary.html) so feel free to check that out but for now, let's get 10000 feet overview of lr.
 
 ![Imgur](https://i.imgur.com/DJLac1e.png)
 
@@ -49,6 +49,8 @@ weights.grad = None
 > Simply put, learning rate is a number which is used to scale the gradients before they're used to update the parameter values in order to avoid bumping endlessly in the loss landscape and reach a local minima as quickly as possible.
 
 Beware that we shouldn't also pick a learning rate that's too low as that would use a lot of compute and reach the local minima (albeit very slowly) but at the expense of your electricity bill and network charges if you're using cloud services :p
+
+<br>
 
 # Setting the problem
 
@@ -88,6 +90,7 @@ datablock = DataBlock(# Our input is an image and output is a single label
 # Create dataloaders from the datablock defined above
 dls = datablock.dataloaders(imagesPath, bs = 32)
 ```
+<br>
 
 # Learning Rate Finder
 
@@ -136,6 +139,8 @@ This is a very conservative approach and works well in many scenarios. It finds 
 
 That lr is used to train the model. In our case since we had a very obvious curve of loss function decline like an inverted parabola, we see that this last strategy for lr_selection worked the best as it's error rates are the lowest.
 
+<br>
+
 # Discriminative Learning Rates
 
 In transfer learning, we use the body of a model which has been trained on a large task like imagenet classification and just discard it's head and append a head pertinent to our use-case. We need to understand a few things about this approach before proceeding further
@@ -166,6 +171,8 @@ This time when we do the lr_find, we see there's really very little left to do f
 > Then we observe that after unfreezing, initially, the loss bumps up; this is because we're making changes to the body which has never seen this data labelled this way. So it's gonna take time to adjust to these new changes. In absence of discriminative LR, these bumps would've been steeper.
 
 Ultimately we get to relatively decent spot where our validation loss is lower than the previous weights which is important to us along with the metric.
+
+<br>
 
 # Learner Re-initialization Clarification
 
