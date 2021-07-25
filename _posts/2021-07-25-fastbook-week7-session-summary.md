@@ -8,7 +8,7 @@ categories: ['fastbook', 'Deep Learning']
 
 # Introduction
 
-In this post, I would like to summarize the concepts covered in week 6 of the fastbook sessions. We continued reading the `05_pet_breeds` chapter and completed the same and started with `06_multicat` chapter. [Aman Arora](https://twitter.com/amaarora) from [Weights & Biases](https://twitter.com/weights_biases) conducted the session and nicely explained different techniques which DL practitioners should consider when training their neural network models.
+In this post, I would like to summarize the concepts covered in week 7 of the fastbook sessions. We continued reading the `05_pet_breeds` chapter and completed the same and started with `06_multicat` chapter. [Aman Arora](https://twitter.com/amaarora) from [Weights & Biases](https://twitter.com/weights_biases) conducted the session and nicely explained different techniques which DL practitioners should consider when training their neural network models.
 
 The session is available for streaming on YouTube and below's the link for the same.
 
