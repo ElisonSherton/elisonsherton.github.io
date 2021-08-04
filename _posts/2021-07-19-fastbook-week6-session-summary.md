@@ -241,5 +241,5 @@ If you liked what you read, feel free to check out [my other posts here.](https:
 1. [fastbook chapter 5](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb)
 2. [wandb fastbook sessions link](https://www.youtube.com/embed/bvtr_1TN6MI)
 3. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch5PetBreeds)
-4. [wandb forums for week 4](https://wandb.ai/aarora/discussions/FastBook-Reading-Group-Week-6--Vmlldzo4NTMwMDM?galleryTag=forum)
+4. [wandb forums for week 6](https://wandb.ai/aarora/discussions/FastBook-Reading-Group-Week-6--Vmlldzo4NTMwMDM?galleryTag=forum)
 5. [Regular Expressions Python Cheatsheet](https://www.dataquest.io/wp-content/uploads/2019/03/python-regular-expressions-cheat-sheet.pdf)

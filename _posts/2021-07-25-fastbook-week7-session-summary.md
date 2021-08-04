@@ -210,4 +210,4 @@ If you liked what you read, feel free to check out [my other posts here.](https:
 1. [fastbook chapter 5](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb)
 2. [wandb fastbook sessions link](https://www.youtube.com/embed/NI109pZgXPU)
 3. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch5PetBreeds)
-4. [wandb forums for week 4](https://wandb.ai/aarora/discussions/Fastbook-Reading-Group-Week-7--Vmlldzo4NzE1MTQ?galleryTag=forum)
+4. [wandb forums for week 7](https://wandb.ai/aarora/discussions/Fastbook-Reading-Group-Week-7--Vmlldzo4NzE1MTQ?galleryTag=forum)

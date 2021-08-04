@@ -400,4 +400,4 @@ If you liked what you read, feel free to check out [my other posts here.](https:
 1. [fastbook chapter 4](https://github.com/fastai/fastbook/blob/master/04_mnist_basics.ipynb)
 2. [wandb fastbook sessions link](https://www.youtube.com/embed/ZSammVUWYqc)
 3. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch4MNIST_basics)
-4. [wandb forums for week 4](https://wandb.ai/aarora/discussions/FastBook-Reading-Group-Week-5--Vmlldzo4MzQwMTI?galleryTag=forum)
+4. [wandb forums for week 5](https://wandb.ai/aarora/discussions/FastBook-Reading-Group-Week-5--Vmlldzo4MzQwMTI?galleryTag=forum)
