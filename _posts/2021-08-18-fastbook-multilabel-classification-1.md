@@ -131,7 +131,7 @@ $$
 Cross \ Entropy = - \Sigma_{i=1}^{N} t_i \times log(p_i)
 $$
 
-*where $t_i$ is the true value and $p_i$ is the probability predicted for a label*
+*where ti is the true value and pi is the probability predicted for a label*
 
 If we continue applying this loss function to our sigmoid activated outputs, we're in trouble. We will not then be penalizing anything where the ground truth label is 0. For the same example above, if we compute the CE loss we see the picture as follows
 
@@ -143,7 +143,7 @@ $$
 Binary \ Cross \ Entropy = - \Sigma_{i=1}^{N} (t_i \times log(p_i) + (1 - t_i) \times log(1 - p_i))
 $$
 
-*where $t_i$ is the true value and $p_i$ is the probability predicted for a label*
+*where ti is the true value and pi is the probability predicted for a label*
 
 Now this is really interesting. It makes sure that whatever the label (0/1) some loss will always come to penalize the model for bad predictions. It will never be zero. Where ground truth is 1, the loss will be -log(p) and where it's 0, the loss would be log(1-p). This would be very useful for the model to individually penalize the model via the different neurons in the classifier head for their mispredictions. 
 
@@ -285,7 +285,7 @@ A graph of ROC for `bus` category from the `PASCAL_2007` datset on which we trai
 
 On the X-axis we have FPR and on the Y-axis we have Recall/TPR. We need to identify the point where the TPR is as high as possible without the FPR increasing. We can figure this out by finding the point which is closest to `(0, 1)` point i.e. where FPR is 0 and TPR is 1. This is shown in the curve with the red dot. For a perfect classifier, we should have a unit-rectangle kind of a graph but practically the distributions of the two classes are never completely distinguishable in most cases.
 
-The complete code to do this will become very large but it is available on github to which I have attached a link below. I will sketch out the pseudo-code for doing this local thresholding and then final aggregation of the predictions.
+The complete code to do this will become very large but it is available on github which I have attached in the [references section](#references). I will sketch out the pseudo-code for doing this local thresholding and then final aggregation of the predictions.
 
 ```yaml
 1. Get the predictions & targets from the fastai learner
