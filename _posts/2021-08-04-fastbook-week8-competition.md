@@ -261,6 +261,6 @@ If you liked what you read, feel free to check out [my other posts here.](https:
 # References
 
 1. [wandb fastbook sessions link](https://www.youtube.com/embed/SfzNEz5ASAY)
-2. [Github code for the application created in the post]()
+2. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/cassavaLeafDiseasePrediction)
 3. [wandb forums for week 8](https://wandb.ai/aarora/discussions/Fastbook-Reading-Group-Week-8--Vmlldzo4ODk4MjI?galleryTag=forum)
 4. [fastai starter Cassava Reference Notebook](https://www.kaggle.com/tanlikesmath/cassava-classification-eda-fastai-starter)
