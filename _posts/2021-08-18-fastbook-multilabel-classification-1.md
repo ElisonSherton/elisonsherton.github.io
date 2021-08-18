@@ -5,11 +5,17 @@ published: true
 categories: ['fastbook', 'Deep Learning']
 ---
 
-[Introduction](#Introduction)
-[The Dataset](#Dataset)
-[Model and Loss](#Model-And-Activation-Function)
-[Model Evaluation](#Model-Evaluation)
-[Conclusion](#Conclusion)
+# Table of Contents
+
+[Introduction](#introduction)
+
+[The Dataset](#dataset)
+
+[Model and Loss](#model-and-activation-function)
+
+[Model Evaluation](#model-evaluation)
+
+[Conclusion](#conclusion)
 
 # Introduction
 
@@ -122,6 +128,7 @@ For single label classification, we use the cross entropy loss function defined 
 $$
 Cross \ Entropy = - \Sigma_{i=1}^{N} t_i \times log(p_i)
 $$
+
 *where $t_i$ is the true value and $p_i$ is the probability predicted for a label*
 
 If we continue applying this loss function to our sigmoid activated outputs, we're in trouble. We will not then be penalizing anything where the ground truth label is 0. For the same example above, if we compute the CE loss we see the picture as follows
@@ -133,13 +140,12 @@ On the other hand, Binary Cross Entropy is defined as follows
 $$
 Binary \ Cross \ Entropy = - \Sigma_{i=1}^{N} (t_i \times log(p_i) + (1 - t_i) \times log(1 - p_i))
 $$
+
 *where $t_i$ is the true value and $p_i$ is the probability predicted for a label*
 
 Now this is really interesting. It makes sure that whatever the label (0/1) some loss will always come to penalize the model for bad predictions. It will never be zero. Where ground truth is 1, the loss will be -log(p) and where it's 0, the loss would be log(1-p). This would be very useful for the model to individually penalize the model via the different neurons in the classifier head for their mispredictions. 
 
 In the image above, we can see how even when the ground truth label is 0, we are getting finite loss values for those neurons as well as against plain cross-entropy loss employed in single-label classification.
-
-<br>
 
 For model, we can still continue using our imagenet pretrained backbones and start with transfer learning. 
 
