@@ -33,7 +33,7 @@ We will be using the `PASCAL_2007` dataset for this task. This is a dataset whic
 
 Simply use fastai's `untar_data` to download the dataset to your disk. It will be stored in a special directory called `.fastai` at your home/root location
 
-```
+```python
 from fastai.vision.all import *
 path = untar_data(URLs.PASCAL_2007)
 ```
@@ -50,7 +50,7 @@ In this dataset, we're given the labels in the form of a dataframe and not in a 
 
 In code, this looks as follows
 
-```
+```python
 # Define the getter for independent variable
 def get_x(row): return path/'train'/row['fname']
 
@@ -66,7 +66,7 @@ def splitter(df):
 
 Now, we can define a dataloader once we have the proper getters for the three main tasks i.e. getting dependent & independent variable and how to split them into train and validation files. Unlike single label classification tasks, for this task, we will have to use the `MultiCategoryBlock` in order to read our dependent variables as one-hot encoded vectors. The rest of the loading remains the same. We can load the data as follows
 
-```
+```python
 # Define a multicategory block with presizing
 dblock = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),
                    splitter=splitter,
@@ -157,7 +157,7 @@ For model, we can still continue using our imagenet pretrained backbones and sta
 
 So, we are now in a position to define a `fastai learner` to do the training. It is as follows:
 
-```
+```python
 learn = cnn_learner(dls, resnet50, metrics=partial(accuracy_multi, thresh=0.5))
 ```
 
