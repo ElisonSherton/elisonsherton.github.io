@@ -303,7 +303,7 @@ If we were to make a comparison, individual class/label's threshold tuning with 
 # Conclusion
 
 
-1. Multi-label classification(MLC) can tag a given datapoint with multiple classes/labels.
+1. Multi-label classifier (MLC) can tag a given datapoint with multiple classes/labels.
 2. The activation used in MLC is `sigmoid` not `softmax`.
 3. Loss function used for MLC is `BinaryCrossEntropy` not `CrossEntropy`.
 4. A good threshold can make a significant difference in getting better/worse accuracy for an MLC.
