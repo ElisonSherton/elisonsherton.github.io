@@ -17,7 +17,10 @@ categories: ['fastbook', 'Deep Learning']
 
 [Conclusion](#conclusion)
 
+[References](#references)
+
 # Introduction
+
 
 Many a time we come across images which have multiple objects of interest. For instance, in the following image we can see that we have both a chair and a tvmonitor. 
 
@@ -27,7 +30,9 @@ To solve the above problem, we need to be able to detect multiple classes/labels
 
 Since `fastai` is a very convenient wrapper around `Pytorch`, there's very little that we will have to change from the perspective of code but the logic behind solving this problem will be somewhat different. We cannot just use our regular `softmax` activation with `cross-entropy loss` function; also the evaluation bit here is much more involved than that of a single-label classification problem. We shall discuss every bit in detail in the following sections. Let's first begin with the dataset.
 
+---
 # Dataset
+
 
 We will be using the `PASCAL_2007` dataset for this task. This is a dataset which contains 20 labels in all and mind the fact that one image can have multiple labels!
 
@@ -91,7 +96,9 @@ Now, if we look at an example of a batch, we can observe the following. Look at 
 
 ![Imgur](https://i.imgur.com/1ExXSVZ.png)
 
+---
 # Model And Activation Function
+
 
 Although using the fastai API to define the model and loss is pretty straightforward, we should pause for a bit and look at the Loss Function and model, especially the loss function in detail.
 
@@ -167,7 +174,9 @@ Then the training and lr_find and other things remain the same as shown in the f
 
 ![Imgur](https://i.imgur.com/7obbMBa.png)
 
+---
 # Model Evaluation
+
 
 This is the most important part as this is considerably different for multi-label classification. 
 
@@ -195,7 +204,9 @@ As seen in the image, we first take the network outputs and apply sigmoid activa
 
 Now, since we're talking about thresholds it becomes important for us during evaluation to figure out what threshold is the best. Also, currently we're using the same threhsold for all the classes/labels. We can tune the threshold over each class separately to come up with a best score for each class and then use those thresholds to get the multi-accuracy across the entire dataset. Let's see how to do that.
 
+---
 ## Global thresholding
+
 
 What we did above could be in some sense called `Global Thresholding` where we used a threshold for all the classes, compared the accuracy for each datapoint, came up with a plot which compares accuracy against the threshold and pick the one which gives the best accuracy.
 
@@ -235,9 +246,11 @@ def threshold(preds, targets):
 
 This function above gives us the best accuracy point and the threshold at which it occurred which could be simply saved as a artefact with the model and during inference, when we wanna get predictions for individual labels, we can compare their probabilities against this threshold and get the discrete results to denote presence/absence of a class.
 
-However, we could do better.
+However, we can do better.
 
+---
 ## Class/Label level thresholding
+
 
 In practise, accuracy is not always the best evaluation metric. For eg. in a world where there's only let's hypothetically say 1% people who are rich, predicting every person to be poor no matter what will make you 99% accurate, but is that really good?
 
@@ -291,7 +304,9 @@ If we were to make a comparison, individual class/label's threshold tuning with 
 
 ![Imgur](https://i.imgur.com/PrI5sSA.png)
 
+---
 # Conclusion
+
 
 1. Multi-label classification(MLC) can tag a given datapoint with multiple classes/labels.
 2. The activation used in MLC is `sigmoid` not `softmax`.
@@ -303,7 +318,9 @@ I hope you enjoyed reading through this blog-post! I would be glad to [connect w
 
 If you liked what you read, feel free to check out [my other posts here.](https://elisonsherton.github.io/categories.html).
 
+---
 # References
+
 
 1. [wandb fastbook sessions link](https://www.youtube.com/watch?v=SfzNEz5ASAY)
 2. [Github code for the application created in the post](https://github.com/ElisonSherton/fastbook_sessions/tree/master/ch6MultiLabel)
