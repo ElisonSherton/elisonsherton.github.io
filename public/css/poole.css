@@ -170,13 +170,16 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #ffffff;
-  background: 2 px solid black;
+  border-width: 2px;
+  border-color: black;
 }
 pre code {
   padding: 0;
   font-size: 100%;
   color: inherit;
   background-color: transparent;
+  border-width: 2px;
+  border-color: black;
 }
 
 /* Pygments via Jekyll */
