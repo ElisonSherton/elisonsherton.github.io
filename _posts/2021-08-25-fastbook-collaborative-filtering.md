@@ -2,22 +2,22 @@
 layout: post
 title: Anime Recommendation System with fastai2
 published: true
-categories: ['Deep Learning']
+categories: ['fastbook', 'Deep Learning']
 ---
 
 The post aims to describe what Collaborative Filtering (henceforth abbreviated as CF throughout the length of this post) is all about and subsequently elaborates on how to build a model to perform this task using fastai2. The topics covered in this post are as follows
 
-- Introduction
-- The Basic Intuition behind CF
-- CF in fastai2
+- [Introduction](#introduction)
+- [The Basic Intuition behind CF](#the-basic-intuition-behind-collaborative-filtering)
+- [CF in fastai2](#cf-in-fastai2)
     - The Embedding Dot Bias Model
     - The Neural Network Model
-- Model Interpretation & making Recommendations
-- References
+- [Model Interpretation & making Recommendations](#model-interpretation-&-making-recommendations)
+- [References](#references)
 
 ![](https://miro.medium.com/max/1890/0*6f7ZXbWcP6J3aYEz)
 
-## Introduction
+# Introduction
 
 > In today’s world where data is oil, one way of utilising data is to perform the task of suggestion/recommendation for individuals. In this fast paced world where content is created at an astounding pace, viewers like it when they’re suggested content similar to what they’ve seen before.
 
@@ -31,7 +31,7 @@ There are several ways to perform collaborative filtering and today, we’ll be 
 
 <hr>
 
-## The Basic Intuition behind Collaborative Filtering
+# The Basic Intuition behind Collaborative Filtering
 
 In order to perform collaborative filtering, both the user/ subscriber/ consumer and the item/ article/ product are represented as matrices. (terminology here is specific to the application but since we’re dealing with anime data, we’ll call users as viewers and item as anime respectively.)
 
@@ -39,7 +39,7 @@ More precisely, every user is represented as a vector of numeric values and so i
 
 The values learned for the user and anime vectors correspond to an abstract n-dimensional space and really have no human-interpretative meaning. But as an attempt to understand what’s really happening, we can think of it this way. Consider the dataset that we’re working with i.e. Viewer-Anime Dataset.
 
-![](https://miro.medium.com/max/700/0*pMK2PU00onHGLT_o)
+![](https://heraldjournalism.com/wp-content/uploads/2020/09/My-Teen-Romantic-Comedy-SNAFU-Season-3-release-date-OreGairu-Season-3-July-2020-1024x576-1-1200x675.jpg)
 
 Let’s say every anime consists of 5 components — romance, comedy, slice of life, harem and action. Then an anime can be represented in the vector space of 5-Dimensions each dimension being one of the above.
 
@@ -65,7 +65,7 @@ We take the two vectors Oregairu and Viewer 1 and multiply respective components
 
 Once we do this for all three anime we observe Viewer 1’s dot products are 29.2, 26 and 31.8 respectively. This means Viewer 1 likes Tokyo Ghoul the best which is indeed high on action.
 
-Viewer 2 on the other hand is into romance and harem. His dot product with all three anime are 47.5, 35.5, 22.5 which means he would like Oregairu the most which is indeed a teenage love comedy! Yukinoshita, Yuigahama, Ishhiki, damn even Shizuka, his teacher, seem to have the hots for Hachiman; don’t you dare tell me you overlooked the harem in this anime…
+Viewer 2 on the other hand is into romance and harem. His dot product with all three anime are 47.5, 35.5, 22.5 which means he would like Oregairu the most which is indeed a teenage love comedy with elements of harem!
 
 After that otaku tangent, getting back to the topic at hand, we can see how representing viewers and anime as a vector can prove useful to determine a ranking of how a viewer would like all the anime or which users will like a particular anime and that’s a very valuable insight which streaming companies like Netflix are exploiting.
 
@@ -74,7 +74,7 @@ There’s also an additional component to both the viewer and the anime vectors 
 <hr>
 
 
-## Collaborative Filtering in fastai2
+# Collaborative Filtering in fastai2
 
 fastai2 provides a sub-package fastai.collab that contains the functions to leverage for CF. After installing fastai2 on your system [instructions here](https://course19.fast.ai/index.html), you can follow along below.
 
@@ -119,7 +119,7 @@ There are many anime in the dataset which have a very few almost no people ratin
 
 <hr>
 
-## Embedding Dot Bias Model
+# Embedding Dot Bias Model
 
 This model is a plain model just like we discussed in The basis section above. Both viewers and anime are represented as vectors and we get matrices for the same since there's many viewers and many anime. Next, we do the dot product on them and compare them with our actual viewer ratings using the loss function Mean Squared Error which we aim to reduce. Eventually the model will become good at representing both the viewers and anime in this n-dimensional space.
 
@@ -137,7 +137,7 @@ After training the model, we should see the loss reduce at each iteration. We ca
 
 <hr>
 
-## The Neural Network Model
+# The Neural Network Model
 On top of embedding dot-bias model we can build an MLP by adding fully connected layers for enhancing the complexity of models. Basically the user and movie vectors are concatenated and passed through a series of neural networks before taking the final dot product. Although in most of the cases, the former performs reasonably well, this neural network model also does work well in some other cases.
 
 It’s a matter of performing trials and looking at the best performing network on evaluation of validation data that we can come to a conclusion on which model performs better. Let’s build a model using Neural Networks as well and test the performance on that.
@@ -154,10 +154,10 @@ The training log is shown aside. It seems like adding the two FC layers at the e
 
 <hr>
 
-## Model Interpretation & making Recommendations
+# Model Interpretation & making Recommendations
 Now that we have a model ready, let’s try to interpret it, use it and make some suggestions/recommendations.
 
-### Understanding Anime biases and weights/embeddings
+## Understanding Anime biases and weights/embeddings
 Let’s try to understand the anime embeddings for the Embedding dot-bias model. First, let’s see what all layers are there in the model.
 
 ```python
@@ -213,7 +213,7 @@ We can confirm that as we discussed earlier, Hyouka and Oregairu are indeed clos
 
 <hr>
 
-### Understanding User Weight/Embedding
+## Understanding User Weight/Embedding
 
 In order to understand the user weights, we will randomly sample a user from our set and then in the remaining corpus, pick one user who is closest and one who is farthest from this randomly sampled user in terms of a specific distance metric known as cosine similarity.
 
@@ -227,7 +227,7 @@ It could be seen that the most similar user has almost all the anime picked whic
 
 <hr>
 
-### A drawback of CF & potential solution
+## A drawback of CF & potential solution
 
 Now we looked at recommendations for users which are already present in database. If we have a new user coming in picture, we don’t have anything to suggest to him since he hasn’t rated any anime/movies.
 
@@ -241,9 +241,10 @@ Collaborative Filtering or Recommender Systems are here to stay and help viewers
 
 <hr>
 
-## References
+# References
 
-1. [Collaborative Filtering in fastai](https://docs.fast.ai/collab.html)
+1. [wandb fastai session link](https://community.wandb.ai/t/week-11-discussion-thread/85)
+1. [Collaborative Filtering in fastai documentation](https://docs.fast.ai/collab.html)
 2. [An In-Depth Guide to Recommender Systems](https://builtin.com/data-science/recommender-systems)
 3. [Github Repo for code used in this post](https://github.com/ElisonSherton/Collaborative-Filtering-On-Anime-Dataset)
 4. [Anime Recommendations Dataset on Kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database)
