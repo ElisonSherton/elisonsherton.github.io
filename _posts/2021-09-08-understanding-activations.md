@@ -14,7 +14,8 @@ Activations are simply what we get after we pass the input through any network l
 - [Basic CNN](#basic-cnn)
 - [Callbacks for activation logging](#callbacks-for-activation-logging)
 - [Understanding activations](#understanding-activations)
-- [Activations analysis to interpret model training](#activations-analysis-to-interpret-model-training)
+- [fastai ActivationStats](#fastai-convenience-function-for-color-dimension)
+- [References](#references)
 
 # Basic CNN
 
@@ -88,10 +89,7 @@ def basic_cnn_model(bn:bool = False)-> nn.Sequential:
     c_block4 = make_conv_block(32, 64,  batch_norm = bn)                # 2 x 2
     c_block5 = make_conv_block(64, 10, batch_norm = False, act = False) # 1 x 1
     return nn.Sequential(*[c_block1, c_block2, c_block3, c_block4, c_block5, Flatten()])
-```
 
-
-```python
 model = basic_cnn_model().to("cuda")
 model
 ```
@@ -110,6 +108,7 @@ for idx, layer in enumerate(model, start = 1):
         xb = layer(xb)
         print(f"Layer {idx} output: {str(xb.shape):<27}")
 ```
+
 **Output**:
 
     Input Shape   : torch.Size([64, 1, 28, 28])
@@ -138,9 +137,9 @@ Since we're all set with our model now, we need to make sure we log the activati
 
 If we want to perform any operation like logging, transformation, versioning etc. of our models/data/output at different points in the training process, we can use the above class to do so. The methods above do stuff just like they sound. To name a few,
 
-- before_fit: If you want to initialize something before every fit or fit_one_cycle call, override this function
-- before_epoch: If you want to initialize or do some computation before a new epoch starts, override this function.
-- after_batch: If you want to do something after every batch has been processed through the neural network, override this function.
+- `before_fit`: If you want to initialize something before every fit or fit_one_cycle call, override this function
+- `before_epoch`: If you want to initialize or do some computation before a new epoch starts, override this function.
+- `after_batch`: If you want to do something after every batch has been processed through the neural network, override this function.
 
 Similarly there's a lot of other things like you may want to do something before validation pass begins or after the training ends or before the next epoch begins. All you need to do is simply inherit from the `Callback` class and create a subclass and override those methods eponymous with the task that you want to perform at different points in an input tensor's journey through the neural network. In order to log activations, we need to create hooks for the required layers on our model *before fitting* and after every batch, *store the activations to a list/container*.
 
@@ -148,19 +147,16 @@ A hook is as the name suggests a data structure to store the activation *(result
 
 For an in-depth explanation on callbacks, refer the [fastai documentation on callbacks](https://docs.fast.ai/callback.core.html). For more details on the `hook_output/s` functions refer the [hook_output documentation](https://docs.fast.ai/callback.hook.html#hook_output).
 
-
 ```python
 class activation_logging(Callback):
     
     def before_fit(self):
-        # Before start of training, initialize a dictionary to store all the activations for several layers
-        # In a hooks list, store the hooks for which you want to get the activations
+        # Before start of training, initialize a dictionary to store all the activations for several layers. In a hooks list, store the hooks for which you want to get the activations
         self.learn.activations = {}
         self.learn.hooks = []
         self.learn.batch_count = 0
         
-        # Our model is a series of sequential layers the first entry of which is a conv layer
-        # We want to log the activations obtained from these conv layers
+        # Our model is a series of sequential layers the first entry of which is a conv layer. We want to log the activations obtained from these conv layers
         for idx, layer in enumerate(self.learn.model):
             if isinstance(layer, nn.Sequential):
                 self.activations[f"layer_{idx}"] = []
@@ -176,9 +172,7 @@ class activation_logging(Callback):
     
     def after_epoch(self):
         self.learn.batch_count = 0
-```
 
-```python
 # Instantiate a learner with the above callback and train for some epochs
 learn = Learner(dls, basic_cnn_model(bn = True), 
                 loss_func=F.cross_entropy, 
@@ -187,6 +181,7 @@ learn = Learner(dls, basic_cnn_model(bn = True),
 
 learn.fit_one_cycle(5, lr_max = 6e-2)    
 ```
+
 **Output**:
 
 <table border="1" class="dataframe">
@@ -245,6 +240,7 @@ Now, our learner method will have an instance of the object of `activation_loggi
 ```python
 learn.activation_logging.activations.keys()
 ```
+
 **Output**:
 
     dict_keys(['layer_0', 'layer_1', 'layer_2', 'layer_3', 'layer_4'])
@@ -253,12 +249,12 @@ learn.activation_logging.activations.keys()
 
 As expected, we have logged the entries for our 5 convolution layers. Let's look at the number of entries in each of these mappings and subsequently what is each layer consisting of.
 
-
 ```python
 for layer in learn.activation_logging.activations:
     print(f"{layer}  | Number of batches: {len(learn.activation_logging.activations[layer])}  | Activation shape: {learn.activation_logging.activations[layer][0].shape}")
 print(learn.dls.train) * 5
 ```
+
 **Output**:
 
     layer_0  |Number of batches: 3515  |Activation shape: torch.Size([64, 8, 14, 14])
@@ -272,8 +268,6 @@ print(learn.dls.train) * 5
 <br>
 
 As we can see that we have logged the activation for the 5 convolution layers each of which has a shape as indicated in the above printed statement per layer.
-
-We have logged the activation throughout the run of epoch which means there's also validation batch activations which we currently don't need. So we'll be only focussing on the train i.e. first `len(learn.dls.train)` = 703 batches.
 
 # Understanding activations 
 
@@ -467,7 +461,6 @@ learn = Learner(dls, basic_cnn_model(bn = False),
 learn.fit_one_cycle(5, lr_max = 6e-2)    
 ```
 
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: left;">
@@ -588,7 +581,6 @@ learn = Learner(dls, basic_cnn_model(bn = True),
 
 learn.fit_one_cycle(1, lr_max = 6e-2)    
 ```
-
 
 <table border="1" class="dataframe">
   <thead>
