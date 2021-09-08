@@ -51,8 +51,6 @@ len(dls.train), len(dls.valid)
 **Output:**
 (703, 235)
 
-<br>
-
 Any convolutional network is made of conv blocks. These conv blocks are most of the time a combination of 
 
 $$ Conv2d \rightarrow BatchNorm \rightarrow Activation(ReLU) $$
@@ -93,6 +91,8 @@ def basic_cnn_model(bn:bool = False)-> nn.Sequential:
 model = basic_cnn_model().to("cuda")
 model
 ```
+
+![Imgur](https://i.imgur.com/iqeDRSo.png)
 
 In order to understand the model activations it's best if we look at the progression of a mini-batch through these model layers. So let's do that and see what we get.
 
@@ -163,7 +163,7 @@ class activation_logging(Callback):
                 self.hooks.append(hook_output(layer[0]))
     
     def after_batch(self):
-        # Log the output of every conv layer in our model
+        # Log the output of every conv layer in our model (only for train batches)
         if self.learn.batch_count < len(learn.dls.train):
             for idx, layer in enumerate(self.learn.model):
                 if isinstance(layer, nn.Sequential):
