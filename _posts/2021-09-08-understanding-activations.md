@@ -11,10 +11,10 @@ They say deep learning is a black-box; which in my honest opinion is true to som
 
 Activations are simply what we get after we pass the input through any network layer (be it conv/linear/convtranspose etc.). Understanding these activations can help us get a sense of the training process of the network i.e. is the training stable, where did it go haywire, how sensitive is it to the outliers etc. We shall perform a simple experiment to demonstrate this process through the rest of this post and in the process also look at the callback functionality of fastai which makes life so much easier when you want to do something in the middle of training.
 
-- [Basic CNN](basic-cnn)
-- [Callbacks for activation logging](callbacks-for-activation-logging)
-- [Understanding activations]()
-- [Activations analysis to interpret model training]()
+- [Basic CNN](#basic-cnn)
+- [Callbacks for activation logging](#callbacks-for-activation-logging)
+- [Understanding activations](#understanding-activations)
+- [Activations analysis to interpret model training](#activations-analysis-to-interpret-model-training)
 
 # Basic CNN
 
@@ -34,14 +34,11 @@ Now that we have the path to our dataset, let's create a datablock to load the d
 
 ```python
 dblock = DataBlock(
-                    # Input will be image, output is a category. Convert the 
-                    # input to be a black and white image from a color image
+                    # Input will be image, output is a category. Convert the input to be a black and white image from a color image
                     (ImageBlock(cls=PILImageBW), CategoryBlock),
-                    # The input can be read through the folder as all of them image files are in
-                    # a single folder in the imagenet structure
+                    # The input can be read through the folder as all of them image files are in a single folder in the imagenet structure
                     get_items = get_image_files,
-                    # Since images are in the imagenet structure, one level above the image location
-                    # should be a folder that's eponymous to the category pertinent to that datapoint
+                    # Since images are in the imagenet structure, one level above the image location should be a folder that's eponymous to the category pertinent to that datapoint
                     get_y = parent_label,
                     # Randomly split the images into train/valid & set seed for reproducibility
                     splitter = RandomSplitter(valid_pct = 0.25, seed = 42),
@@ -83,14 +80,13 @@ def make_conv_block(input_channels: int, output_channels:int, kernel_size:int = 
 ```python
 def basic_cnn_model(bn:bool = False)-> nn.Sequential:
     """
-    Create a simple CNN model which reduces eventually to a 1 x 1 activation
-    Assume the input size is 28 x 28
+    Create a simple CNN model which reduces eventually to a 1 x 1 activation, assume the input size is 28 x 28
     """
-    c_block1 = make_conv_block(1, 8, kernel_size = 5, batch_norm = bn)      # 14 x 14
-    c_block2 = make_conv_block(8, 16,  batch_norm = bn)                     # 7 x 7
-    c_block3 = make_conv_block(16, 32,  batch_norm = bn)                    # 4 x 4
-    c_block4 = make_conv_block(32, 64,  batch_norm = bn)                    # 2 x 2
-    c_block5 = make_conv_block(64, 10, batch_norm = False, act = False)     # 1 x 1
+    c_block1 = make_conv_block(1, 8, kernel_size = 5, batch_norm = bn)  # 14 x 14
+    c_block2 = make_conv_block(8, 16,  batch_norm = bn)                 # 7 x 7
+    c_block3 = make_conv_block(16, 32,  batch_norm = bn)                # 4 x 4
+    c_block4 = make_conv_block(32, 64,  batch_norm = bn)                # 2 x 2
+    c_block5 = make_conv_block(64, 10, batch_norm = False, act = False) # 1 x 1
     return nn.Sequential(*[c_block1, c_block2, c_block3, c_block4, c_block5, Flatten()])
 ```
 
@@ -99,30 +95,6 @@ def basic_cnn_model(bn:bool = False)-> nn.Sequential:
 model = basic_cnn_model().to("cuda")
 model
 ```
-**Output**:
-    Sequential(
-      (0): Sequential(
-        (0): Conv2d(1, 8, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
-        (1): ReLU()
-      )
-      (1): Sequential(
-        (0): Conv2d(8, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
-        (1): ReLU()
-      )
-      (2): Sequential(
-        (0): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
-        (1): ReLU()
-      )
-      (3): Sequential(
-        (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
-        (1): ReLU()
-      )
-      (4): Sequential(
-        (0): Conv2d(64, 10, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
-      )
-      (5): Flatten(full=False)
-    )
-<br>
 
 In order to understand the model activations it's best if we look at the progression of a mini-batch through these model layers. So let's do that and see what we get.
 
@@ -162,7 +134,7 @@ Since we're all set with our model now, we need to make sure we log the activati
 
 # Callbacks for activation logging
 
-![](./images/callbacks.png)
+![Imgur](https://i.imgur.com/7ywFb0Q.png)
 
 If we want to perform any operation like logging, transformation, versioning etc. of our models/data/output at different points in the training process, we can use the above class to do so. The methods above do stuff just like they sound. To name a few,
 
@@ -289,11 +261,11 @@ print(learn.dls.train) * 5
 ```
 **Output**:
 
-    layer_0  | Number of batches: 3515  | Activation shape: torch.Size([64, 8, 14, 14])
-    layer_1  | Number of batches: 3515  | Activation shape: torch.Size([64, 16, 7, 7])
-    layer_2  | Number of batches: 3515  | Activation shape: torch.Size([64, 32, 4, 4])
-    layer_3  | Number of batches: 3515  | Activation shape: torch.Size([64, 64, 2, 2])
-    layer_4  | Number of batches: 3515  | Activation shape: torch.Size([64, 10, 1, 1])
+    layer_0  |Number of batches: 3515  |Activation shape: torch.Size([64, 8, 14, 14])
+    layer_1  |Number of batches: 3515  |Activation shape: torch.Size([64, 16, 7, 7])
+    layer_2  |Number of batches: 3515  |Activation shape: torch.Size([64, 32, 4, 4])
+    layer_3  |Number of batches: 3515  |Activation shape: torch.Size([64, 64, 2, 2])
+    layer_4  |Number of batches: 3515  |Activation shape: torch.Size([64, 10, 1, 1])
 
     3515
 
@@ -309,7 +281,7 @@ It is very important for a model to have certain number of activations alive to 
 
 Let us look at a very simple example below which is considering an MLP (i.e. fully connected network) but the concept applies to convolutional nets as well.
 
-![](./images/nn1.png)
+![Imgur](https://i.imgur.com/SyAJ8d8.png)
 
 We have considered a simple multi-layer perceptron which given three input features, gives out 1 output feature with two hidden layers. With this example we can now see how activations can help us. Let me point it out below.
 
@@ -320,7 +292,7 @@ We have considered a simple multi-layer perceptron which given three input featu
 
 The above image is an example of a bad model state. Below is a better model state.
 
-![](./images/nn2.png)
+![Imgur](https://i.imgur.com/1pOghCC.png)
 
 We could see here that the first layer activations are allowing some information propagation and that is providing us with some meaningful output.
 
@@ -331,8 +303,7 @@ But since we're tracking each batch and for a convolution layer we have 4 dimens
 ```python
 def process_layer(layer_activations: list, with_log:bool = False, bins:int = 40) -> list:
     """
-    Given a list of batch activations for a particular layer, processes them and returns histograms
-    corresponding to the individual batch activations
+    Given a list of batch activations for a particular layer, processes them and returns histograms corresponding to the individual batch activations
     """
     strips = []
     
@@ -425,8 +396,6 @@ train_activations = learn.activation_logging.activations["layer_0"]
 visualize_color_map(train_activations)
 ```
 
-
-
 <div>
     <style>
         /* Turns off some styling */
@@ -444,7 +413,7 @@ visualize_color_map(train_activations)
   100.00% [3515/3515 00:01<00:00 Extracting layer stats...]
 </div>
 
-![png](output_34_1.png)
+![Imgur](https://i.imgur.com/6JBrLNi.png)
 
 <br>
 
@@ -475,7 +444,7 @@ visualize_color_map(train_activations, with_log = True)
   100.00% [3515/3515 00:03<00:00 Extracting layer stats...]
 </div>
 
-![png](output_36_1.png)
+![Imgur](https://i.imgur.com/9x6gcep.png)
 
 <br>
 
@@ -570,7 +539,7 @@ visualize_color_map(train_activations, with_log = True)
   100.00% [3515/3515 00:01<00:00 Extracting layer stats...]
 </div>
 
-![png](output_39_1.png)
+![Imgur](https://i.imgur.com/LylXoiZ.png)
 
 
 As we can see the training is now very bumpy and unstable. Let us only focus on the first epoch for now and see it's graph
@@ -598,7 +567,7 @@ visualize_color_map(train_activations, with_log = True)
   100.00% [703/703 00:00<00:00 Extracting layer stats...]
 </div>
 
-![png](output_41_1.png)
+![Imgur](https://i.imgur.com/moVD544.png)
 
 In the first epoch, after every batch, we can observe the activations are flipping a lot which means that backprop is tuning the weights in a very crazy manner and forward passes are subsequently becoming very unstable. This is just to demonstrate how `batch_norm` can help stabilize/smoothen the training process so we don't have to worry about such issues.
 
@@ -648,13 +617,13 @@ learn.fit_one_cycle(1, lr_max = 6e-2)
 learn.activation_stats.color_dim(0, figsize = (20, 5))
 ```
 
-![png](output_45_0.png)
+![Imgur](https://i.imgur.com/tlWTwgX.png)
 
 ```python
 learn.activation_stats.color_dim(8, figsize = (20, 5))
 ```
 
-![png](output_46_0.png)
+![Imgur](https://i.imgur.com/t59EorU.png)
 
 <br>
 
