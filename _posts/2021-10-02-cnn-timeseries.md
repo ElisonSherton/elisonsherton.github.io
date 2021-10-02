@@ -36,7 +36,7 @@ Within time-series, depending on the number of predictors they could be classifi
 |Univariate Time Series|Multivariate Time Series|
 |---|---|
 |Single variable varying over time|Set of variables varying over time|
-|Symbolically, $y_t = a_0y_{t-1} + a_1y_{t-2} + ...$|Symbolically, $y_t = a_0y_{t-1} + b_0x_{t-1} + a_1y_{t-2} + b1x_{t-2} + ...$|
+|Symbolically, <a href="https://www.codecogs.com/eqnedit.php?latex=y_t&space;=&space;a_0y_{t-1}&space;&plus;&space;a_1y_{t-2}&space;&plus;&space;..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_t&space;=&space;a_0y_{t-1}&space;&plus;&space;a_1y_{t-2}&space;&plus;&space;..." title="y_t = a_0y_{t-1} + a_1y_{t-2} + ..." /></a>|Symbolically, <a href="https://www.codecogs.com/eqnedit.php?latex=y_t&space;=&space;a_0y_{t-1}&space;&plus;&space;b_0x_{t-1}&space;&plus;&space;a_1y_{t-2}&space;&plus;&space;b1x_{t-2}&space;&plus;&space;..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_t&space;=&space;a_0y_{t-1}&space;&plus;&space;b_0x_{t-1}&space;&plus;&space;a_1y_{t-2}&space;&plus;&space;b1x_{t-2}&space;&plus;&space;..." title="y_t = a_0y_{t-1} + b_0x_{t-1} + a_1y_{t-2} + b1x_{t-2} + ..." /></a>|
 |Studying closing prices of a stock|Studying closing prices of a stock|
 
 **Wait what? How can the same example be cited under both the types?**
