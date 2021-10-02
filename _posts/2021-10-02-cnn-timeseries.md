@@ -2,7 +2,7 @@
 layout: post
 title: Time Series Analysis with CNNs
 published: true
-categories: ['fastbook', 'Deep Learning']
+categories: ['pytorch reading group', 'Deep Learning']
 ---
 
 In this post, we will go through how to use a CNN model for building a time series forecasting model from scratch. We will use the data containing the share price information for `Reliance Industries` which is one of the biggest Indian multinational conglomerate companies. 
