@@ -391,7 +391,7 @@ We will build a CNN with a fully connected layer at the end in order to do this 
 ![Final Model](https://i.imgur.com/INsPIhW.png)
 
 The layers in the model are as follows
-- Convolution layer which creates 64 channels out of the given single channel
+- Convolution Layer - This creates 64 channels out of the given single channel
 - Concat Pooling - This is commonly used now after fastai popularized it. We create max and average pools out of the feature maps and concatenate them into one long vector
 - Fully Connected Layer - Takes in the pooled output from previous step and generates the final forecast/prediction for the stock price.
 
