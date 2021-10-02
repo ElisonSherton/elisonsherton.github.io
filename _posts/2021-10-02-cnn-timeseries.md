@@ -61,7 +61,7 @@ With this gentle introduction to time-series, I hope we have enough ground cover
 
 CNNs or convolutional neural networks are very common when it comes to 2-D data like images. The best part of a CNN is it's capability to preserve spatial information which is exactly what we need. We could imagine the time dimension along the X-axis spatially and use a horizontal 1-D convolution operation in order to extract features. The following figure will help us understand it better.
 
-![1D-Conv](https://i.imgur.com/OLYNShA.png)
+![1-D Conv](https://i.imgur.com/r1MLho1.png)
 
 Let's assume we're dealing with univariate time series for now. This will mean we have a single input channel. Also, let's assume we're using the information from the past three timestamps to predict the next timestamp quantity. So our input becomes `1 x 3`. We can extract multiple features by creating several feature maps (in the above case is 64). Also, to preserve the dimensionality, let's add zero padding to the input.
 
