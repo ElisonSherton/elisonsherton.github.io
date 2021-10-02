@@ -557,7 +557,7 @@ Not bad for a starting model right? We could also use other factors like `Open`,
 The code for the entire tutorial will be available on github so feel free to fork and experiment if you liked the analysis :) I hope you had fun reading this and got to know how to use CNNs for time series analysis. If you liked what you read, you could read my [other posts here](https://elisonsherton.github.io/archive.html) and connect with me on [twitter here](https://twitter.com/ElisonSherton). 
 
 # References
-1. [Github code implementation](https://github.com/ElisonSherton/fastbook_sessions)
+1. [Github code implementation](https://github.com/ElisonSherton/fastbook_sessions/tree/master/cnn_timeseries)
 2. [CNNs for time series forecasting by Jason Brownlee](https://machinelearningmastery.com/how-to-develop-convolutional-neural-network-models-for-time-series-forecasting/)
 3. [nsepy - python API to get info for NSE shares](https://nsepy.xyz/)
 4. [Pytorch book reading group](https://community.wandb.ai/t/5-pytorch-book-thread-sunday-26th-sept-8am-pt/743)
