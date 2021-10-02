@@ -107,6 +107,10 @@ reliance_df.tail(2)
 
 <div>
 <style scoped>
+    .dataframe table {
+        table-layout: fixed;
+    }
+
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
