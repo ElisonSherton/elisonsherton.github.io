@@ -9,7 +9,7 @@ In this post, we will go through how to use a CNN model for building a time seri
 
 Here is the table of contents for what we shall be covering in the blog post
 
-- [A quick intro to time-series](#Quick-intro-to-time-series)
+- [A quick intro to time-series](#quick-intro-to-time-series)
     - Introduction
     - Univariate time series
     - Multivariate time series
