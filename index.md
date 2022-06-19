@@ -7,7 +7,7 @@ title: Home
 
 I am Vinayak Nayak, a Mechanical Engineer by vocation,currently working as an AI Developer at [Okkular](https://www.okkular.io/). 
 
-![](https://images-na.ssl-images-amazon.com/images/I/51GjMcImlOL.jpg)
+![](https://i.imgur.com/sfGyRuU.png)
 
 Ever since I encountered that sophisticated real world concepts could be modelled as simulations in isolation during my undergrad, I was and am thrilled about the power of data. Since then, I have come a long way and yet it feels just like the beginning of my data journey.
 
