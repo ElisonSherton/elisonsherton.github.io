@@ -8,6 +8,11 @@ title: Resume
 ## EDUCATION
 
 <p>
+<b>Master of Technology in Data Science and Engineering</b><br>
+<i>Birla Institute of Technology<a href="https://www.bits-pilani.ac.in/" target="_blank">🔗</a></i><br>
+<i>10/2021 – Present 8.94 CGPA, Remote</i></p>
+
+<p>
 <b>PGP in Data Science</b><br>
 <i>International School of Engineering (INSOFE) <a href="https://www.insofe.edu.in/" target="_blank">🔗</a></i><br>
 <i>06/2019 – 11/2019 80% Agg., Mumbai, India</i></p>
