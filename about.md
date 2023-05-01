@@ -3,14 +3,14 @@ layout: page
 title: Resume
 ---
 
-<a href="https://drive.google.com/file/d/1maJGA3u6bTfKOyqoMBxiFwFwtmHVj2Ak/view" target="_blank">Download my resume here</a>
+<a href="https://drive.google.com/file/d/1CMKbqEzIhOW9EviE_5ne7I15Ch-ySUUQ/view?usp=sharing" target="_blank">Download my resume here</a>
 
 ## EDUCATION
 
 <p>
 <b>Master of Technology in Data Science and Engineering</b><br>
 <i>Birla Institute of Technology<a href="https://www.bits-pilani.ac.in/" target="_blank">🔗</a></i><br>
-<i>10/2021 – Present 8.94 CGPA, Remote</i></p>
+<i>10/2021 – Present 9.34 CGPA, Remote</i></p>
 
 <p>
 <b>PGP in Data Science</b><br>
@@ -25,6 +25,18 @@ title: Resume
 ## WORK EXPERIENCE
 
 <p>
+<b>Data Scientist</b><br>
+<b>Karza Technologies Pvt. Ltd. <a href="https://karza.in/" target="_blank">🔗</a></b><br>
+<i>09/2022 – Present; Mumbai, India</i><br>
+<i>Responsibilities/Tasks</i><br>
+<ul>
+<li>Worked on Face Recognition and Face Image Quality Analysis</li>
+<li>Built data augmentation pipelines and built novel models for face recognition for 1:1 Matching across pair of images from different domains ranging from PII cards to Print Photos to Selfies.</li>
+<li>Helped create quality estimates for images of faces since they were all across a wide variety of domains and poor quality face-match estimates needed to be highlighted for manual review.</li>
+</ul>
+</p>
+
+<p>
 <b>AI Developer</b><br>
 <b>Okkular <a href="https://www.okkular.io/" target="_blank">🔗</a></b><br>
 <i>03/2020 – Present; Mumbai, India</i><br>
@@ -34,6 +46,7 @@ title: Resume
 <li>Trained NER models to perform keyword extraction for tagging product descriptions</li>
 <li>Conceptualised and implemented novel solutions for similar/alike product recommendation</li>
 </ul>
+<i>Contact</i>: <a href="https://www.linkedin.com/in/vahuja4/" target="_blank">Vishal Ahuja</a>
 </p>
 
 <p>
@@ -72,22 +85,8 @@ Engineering Dept.</li>
 <li>Bridged the link between customer & internal divisions of Sales, Purchasing & Technical Departments</li>
 <li>Ideated & implemented a project using VBA to trace the lifecycle of an RFQ (Request for quote) to track the response time of quotations</li>
 </ul>
-<i>Contact</i>: <a href="https://in.linkedin.com/in/amit-desai-b402a015" target="_blank">Amit Desai</a>
+<i>Contact</i>: <a href="https://www.linkedin.com/in/desaiamitkumar/" target="_blank">Amit Desai</a>
 </p><br>
-
-## SKILLS/PLATFORMS/LANGUAGES
-
-<img align="left" alt="Visual Studio Code" width="60px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />
-<img align="left" alt="Git" width="60px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />
-<img align="left" alt="pytorch" width="60px" src="https://pbs.twimg.com/profile_images/1306686545974362113/JYq2LGIA_400x400.jpg" />
-<img align="left" alt="numpy" width="60px" src="https://numpy.org/images/logos/numpy.svg" />
-<img align="left" alt="pandas" width="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDD7q7wCVdRNtROzgtARnDThPmab6k2x7Q&usqp=CAU" />
-<img align="left" alt="scikit-learn" width="60px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" />
-<img align="left" alt="Flask" width="60px" src="https://user-images.githubusercontent.com/567298/52816968-216f6480-30ab-11e9-9d19-6418ba51563b.png" />
-<img align="left" alt="Jupyter" width="60px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" />
-<img align="left" alt="Git" width="60px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
-<img align="left" alt="GitHub" width="60px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
-<img align="left" alt="Terminal" width="60px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /><br><br><br><br>
 
 ## HACKATHONS & PROJECTS
 
