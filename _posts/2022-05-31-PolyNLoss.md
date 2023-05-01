@@ -31,9 +31,9 @@ Given two distributions p and q which could be represented as k-dimensional vect
 
 $$Cross Entropy = -\sum_{i=1}^{k}  q_i log(p_i)$$
 
-In any classification problem, $q_i$ and $p_i$ are the target distribution (i.e. one-hot encoded) and the distribution output from a neural network respectively.
+In any classification problem, q<sub>i</sub> and p<sub>i</sub> are the target distribution (i.e. one-hot encoded) and the distribution output from a neural network respectively.
 
-For most single label classification problems, since $q_i$ is one-hot encoded, they have all their components to be 0s and only one component in that vector is 1 which is the true class of that data-point. So, with this fact, the above equation could be simplified and rewritten as
+For most single label classification problems, since q<sub>i</sub> is one-hot encoded, they have all their components to be 0s and only one component in that vector is 1 which is the true class of that data-point. So, with this fact, the above equation could be simplified and rewritten as
 
 $$CrossEntropy = -q_tlog(p_t) = -log(p_t)$$
 
@@ -106,12 +106,11 @@ I have tried to summarize the above discussion in the following graphic. The plo
 
 ## PolyNLoss by perturbing coefficients in CE Loss
 
-As shown above, if we could modify all alphas or at least a lot of leading alpha terms (since very high powers of 1 - p<sub>t</sub> would likely tend to zero as |1 - p<sub>t</sub>| < 1) based on the task at hand, it might benefit the process of backprop. However, computationally it would mean tuning a lot of hyperparameters. Consider that we decide to only adjust the first n terms of the infinite series as follows
+As shown above, if we could modify all alphas or at least a lot of leading alpha terms (since very high powers of 1 - p<sub>t</sub> would likely tend to zero as abs(1 - p<sub>t</sub>) < 1) based on the task at hand, it might benefit the process of backprop. However, computationally it would mean tuning a lot of hyperparameters. Consider that we decide to only adjust the first n terms of the infinite series as follows
 
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20Loss%20%3D%20%28%5Cepsilon_1%20&plus;%201%29%281-p_t%29%20&plus;%20%28%5Cepsilon_2&plus;1%29%5Cfrac%7B%281-p_t%29%5E2%7D%7B2%7D%20&plus;...&plus;%20%28%5Cepsilon_n%20&plus;%201%29%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20...)
 
-Now, if we take the epsilon terms apart, we will end up with 
-
+Now, if we take the &epsilon; terms apart, we will end up with 
 
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20Loss%20%3D%20%5Cepsilon_1%20%281-p_t%29%20&plus;%20%5Cepsilon_2%5Cfrac%7B%281-p_t%29%5E2%7D%7B2%7D%20&plus;...&plus;%20%5Cepsilon_n%20%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20%281-p_t%29%20&plus;%20%5Cfrac%7B%281-p_t%29%5E2%7D%7B2%7D%20&plus;%20...%20&plus;%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20...)
 
