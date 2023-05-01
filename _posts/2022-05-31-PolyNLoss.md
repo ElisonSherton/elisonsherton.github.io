@@ -52,7 +52,7 @@ Whenever the model is going wrong, we want to give it a big penalty/loss so that
 
 On the other hand, when the model is doing well, this same penalty should decrease and even tend to zero as we're tending to the right distribution.
 
-In the above example, target distribution $=[1,0]$ and the model prediction $=[0.1, 0.9]$
+In the above example, target distribution is [1,0] and the model prediction is [0.1, 0.9]
 
 $$Cross Entropy = -1 \times log(0.1) - 0 \times log(0.9) = 1$$. 
 
@@ -63,9 +63,9 @@ $$Cross Entropy = -1 \times log(0.1) - 0 \times log(0.9) = 1$$.
 |🐱|0|0.1|
 |🐶|1|0.9|
 
-Here, target distribution $=[0,1]$ and the model prediction $=[0.1, 0.9]$
+Here, target distribution is [0,1] and the model prediction is [0.1, 0.9]
 
-So, $Cross Entropy = -0 \times log(0.1) - 1 \times log(0.9) = .046$.
+$$Cross Entropy = -0 \times log(0.1) - 1 \times log(0.9) = .046$$
 
 Probabilities will always be between 0 and 1. If we look at the graph of a negative logarithmic function between 0 to 1, we observe that when the probabilities tend to small values, the value of negative logarithm is very high and as we move toward 1, it becomes 0. 
 
@@ -84,21 +84,21 @@ Using this, we can express the reduced cross entropy loss above as
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20Cross%20Entropy%20%3D%20log%281%29%20&plus;%5Cfrac%7B%5Cfrac%7Bd%28logp_t%29%7D%7Bdp_t%7D%28p_t-1%29%5E1%7D%7B1%21%7D%20&plus;%20...%20&plus;%20%5Cfrac%7B%5Cfrac%7Bd%5En%28logp_t%29%7D%7Bdp_t%7D%28p_t-1%29%5En%7D%7Bn%21%7D)
 
 where we have taken the value as a = 1 for convenience in expanding the series
-Substituting $\frac{d(logp_t)}{dt} = \frac{1}{p_t} = \frac{1}{1} = 1$ and so on for all the terms involving derivative wrt $p_t$ at 1 (since a = 1) in the above equation, we finally get
+Substituting $$\frac{d(logp_t)}{dt} = \frac{1}{p_t} = \frac{1}{1} = 1$$ and so on for all the terms involving derivative wrt p<sub>2</sub> at 1 (since a = 1) in the above equation, we finally get
 
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20Cross%20Entropy%20%3D%20-log%28p_t%29%20%3D%281-p_t%29%20&plus;%20%5Cfrac%7B%281-p_t%29%5E2%7D%7B2%7D%20&plus;...&plus;%20%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20...)
 
-Now, if we substitute $(1-p_t) = x$ and all the coefficients with $\alpha$, we can again view the above equation as 
+Now, if we substitute 1 - p<sub>t</sub> = x and all the coefficients with &alpha;, we can again view the above equation as 
 
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20CrossEntropy%20%3D%20-log%28p_t%29%20%3D%20%5Calpha_1x%5E1%20&plus;%20%5Calpha_2x%5E2%20&plus;%20%5Calpha_3x%5E3%20&plus;%20...%20&plus;%20%5Calpha_nx%5En%20&plus;%20...)
 
-> We can interpret the above function as a combination of several powers of x, each weighted with a fixed coefficient $\alpha_i$.  Wouldn't it be amazing if we could tweak the $\alpha_i$ for each term in order to suit the downstream task *(in our case classification, but it could be some other task as well that utilized CE loss for training)* at hand? This is the central idea behind PolyNLoss.
+> We can interpret the above function as a combination of several powers of x, each weighted with a fixed coefficient &alpha;.  Wouldn't it be amazing if we could tweak the &alpha; for each term in order to suit the downstream task *(in our case classification, but it could be some other task as well that utilized CE loss for training)* at hand? This is the central idea behind PolyNLoss.
 
 Intuitively saying, think like we're having dials and we're tuning them (not the model but we are doing this externally hence a hyperparameter) such that it will help the downstream task in a positive manner
 
 $$Cross Entropy = 🎛x^1 + 🎛x^2 + 🎛x^3 + ... + 🎛x^n + ... $$
 
-where $x = (1 - p_t)$
+where x = 1 - p<sub>t</sub>
 
 I have tried to summarize the above discussion in the following graphic. The plot on LHS is the actual cross-entropy loss. On the right, we have simulated the CE loss using the formula above. Gradually we keep adding one term and plot the nature of the curve. We can see that as we go from 1 term to 20 terms in the expansion, we're gradually approaching the same shape as CE Loss. This is indicated by the loss in RMSE between the two function values on the LHS and RHS.
 
@@ -106,7 +106,7 @@ I have tried to summarize the above discussion in the following graphic. The plo
 
 ## PolyNLoss by perturbing coefficients in CE Loss
 
-As shown above, if we could modify all alphas or at least a lot of leading alpha terms (since very high powers of $(1-p_t)$ would likely tend to zero (as $|1-p_t| < 1$) based on the task at hand, it might benefit the process of backprop. However, computationally it would mean tuning a lot of hyperparameters. Consider that we decide to only adjust the first n terms of the infinite series as follows
+As shown above, if we could modify all alphas or at least a lot of leading alpha terms (since very high powers of 1 - p<sub>t</sub> would likely tend to zero as |1 - p<sub>t</sub>| < 1) based on the task at hand, it might benefit the process of backprop. However, computationally it would mean tuning a lot of hyperparameters. Consider that we decide to only adjust the first n terms of the infinite series as follows
 
 ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B200%7D%20%5Ctiny%20Loss%20%3D%20%28%5Cepsilon_1%20&plus;%201%29%281-p_t%29%20&plus;%20%28%5Cepsilon_2&plus;1%29%5Cfrac%7B%281-p_t%29%5E2%7D%7B2%7D%20&plus;...&plus;%20%28%5Cepsilon_n%20&plus;%201%29%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20%5Cfrac%7B%281-p_t%29%5En%7D%7Bn%7D%20&plus;%20...)
 
@@ -120,9 +120,9 @@ Now, the second part here is the Taylor series expansion of CE Loss and the lead
 
 ![](https://latex.codecogs.com/gif.latex?PolyNLoss%20%3D%5Csum_%7Bi%20%3D%201%7D%5E%7Bn%7D%5Cepsilon_i%5Cfrac%7B%281-p_t%29%5Ei%7D%7Bi%7D%20&plus;%20CE%20Loss)
 
-In section 4 of the paper, the authors discuss about the effects of these perturbations and they claim that adjusting the first polynomial coefficient \epsilon_1 leads to *maximal* gain while requiring *minimal* code change and hyperparameter tuning. In the subsequent section, we shall therefore implement our own version of Poly1Loss from scratch in pytorch with the help of fastai library on an open-source dataset to bolster our practical understanding of this concept. With respect to our control knobs analogy, we can say that poly loss is nothing but
+In section 4 of the paper, the authors discuss about the effects of these perturbations and they claim that adjusting the first polynomial coefficient &epsilon;<sub>1</sub> leads to *maximal* gain while requiring *minimal* code change and hyperparameter tuning. In the subsequent section, we shall therefore implement our own version of Poly1Loss from scratch in pytorch with the help of fastai library on an open-source dataset to bolster our practical understanding of this concept. With respect to our control knobs analogy, we can say that poly loss is nothing but
 
-$PolyNLoss = CE Loss + 🎛 \times (1-p_t) + 🎛 \times (1-p_t^2)+ ... 🎛 \times (1-p_t)^n$
+$$PolyNLoss = CE Loss + 🎛 \times (1-p_t) + 🎛 \times (1-p_t^2)+ ... 🎛 \times (1-p_t)^n$$
 
 These knobs will effectively control the combination of the respective terms in the loss function. These knobs could be adjusted to any quantity from the set of Real numbers.
 
