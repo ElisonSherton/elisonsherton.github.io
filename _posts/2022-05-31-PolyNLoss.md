@@ -54,7 +54,7 @@ On the other hand, when the model is doing well, this same penalty should decrea
 
 In the above example, target distribution $=[1,0]$ and the model prediction $=[0.1, 0.9]$
 
-So, $Cross Entropy = -1 \times log(0.1) - 0 \times log(0.9) = 1$. 
+$$Cross Entropy = -1 \times log(0.1) - 0 \times log(0.9) = 1$$. 
 
 ***Scenario2 - The pet is a dog***
 
@@ -102,7 +102,7 @@ where $x = (1 - p_t)$
 
 I have tried to summarize the above discussion in the following graphic. The plot on LHS is the actual cross-entropy loss. On the right, we have simulated the CE loss using the formula above. Gradually we keep adding one term and plot the nature of the curve. We can see that as we go from 1 term to 20 terms in the expansion, we're gradually approaching the same shape as CE Loss. This is indicated by the loss in RMSE between the two function values on the LHS and RHS.
 
-![Imgur](https://i.imgur.com/GgTs5Uq.gifv)
+![Imgur](https://raw.githubusercontent.com/ElisonSherton/hostFiles/master/images/ce_vs_polyN.gif)
 
 ## PolyNLoss by perturbing coefficients in CE Loss
 
