@@ -52,7 +52,7 @@ Whenever the model is going wrong, we want to give it a big penalty/loss so that
 
 On the other hand, when the model is doing well, this same penalty should decrease and even tend to zero as we're tending to the right distribution.
 
-In the above example, target distribution $=[1,0]$ and the model prediction $=[0.1, 0.9]
+In the above example, target distribution $=[1,0]$ and the model prediction $=[0.1, 0.9]$
 
 So, $Cross Entropy = -1 \times log(0.1) - 0 \times log(0.9) = 1$. 
 
