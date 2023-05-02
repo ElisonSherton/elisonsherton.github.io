@@ -39,7 +39,7 @@ title: Resume
 <p>
 <b>AI Developer</b><br>
 <b>Okkular <a href="https://www.okkular.io/" target="_blank">🔗</a></b><br>
-<i>03/2020 – Present; Mumbai, India</i><br>
+<i>03/2020 – 09/2022; Mumbai, India</i><br>
 <i>Responsibilities/Tasks</i><br>
 <ul>
 <li>Developed classifiers to facilitate tagging product images</li>
