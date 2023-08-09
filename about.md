@@ -26,13 +26,13 @@ title: Resume
 
 <p>
 <b>Data Scientist</b><br>
-<b>Karza Technologies Pvt. Ltd. <a href="https://karza.in/" target="_blank">🔗</a></b><br>
+<b>Perfios Software Solutions Private Ltd.<a href="https://www.perfios.com/" target="_blank">🔗</a></b><br>
 <i>09/2022 – Present; Mumbai, India</i><br>
 <i>Responsibilities/Tasks</i><br>
 <ul>
-<li>Worked on Face Recognition and Face Image Quality Analysis</li>
-<li>Built data augmentation pipelines and built novel models for face recognition for 1:1 Matching across pair of images from different domains ranging from PII cards to Print Photos to Selfies.</li>
-<li>Helped create quality estimates for images of faces since they were all across a wide variety of domains and poor quality face-match estimates needed to be highlighted for manual review.</li>
+<li>Work on 1:1 Face Matching and Face Image Quality Analysis</li>
+<li>Build data augmentation pipelines and novel models for face recognition for 1:1 Matching across pair of images from different domains ranging from PII cards to Print Photos to Selfies.</li>
+<li>Help create quality estimates for images of faces since they are all across a wide variety of domains and poor quality face-match estimates needed to be highlighted for manual review.</li>
 </ul>
 </p>
 
