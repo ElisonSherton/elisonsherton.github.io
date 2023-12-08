@@ -5,6 +5,8 @@ title: Home
 
 # Hello Everyone!
 
+<img src="https://raw.githubusercontent.com/ElisonSherton/elisonsherton.github.io/master/public/profile_pic.jpg">
+
 I am Vinayak Nayak, a Mechanical Engineer by profession, currently employed as a Data Scientist at [Perfios Software Solutions Pvt. Ltd.](https://www.perfios.com/)
 
 Ever since I discovered that sophisticated real-world phenomena could be modeled as simulations using the power of computing, which was during my undergraduate studies, I have been fascinated by the potential of data. During that time, using C++, we modeled a physical process involving metal vapor deposition in a low-pressure container by heating heavy metals. This process was inherently stochastic, and we simulated it using a Monte Carlo simulation. It was a 'Eureka' moment for me. Since then, I have come a long way, and considering the rapid pace at which this field is growing, it still feels like there is much more to explore in the realm of data and computing, given its constant evolution.
