@@ -10,7 +10,7 @@ title: Resume
 <p>
 <b>Master of Technology in Data Science and Engineering</b><br>
 <i>Birla Institute of Technology<a href="https://www.bits-pilani.ac.in/" target="_blank">🔗</a></i><br>
-<i>10/2021 – Present 9.34 CGPA, Remote</i></p>
+<i>10/2021 – 10/2023 9.38 CGPA, Remote</i></p>
 
 <p>
 <b>PGP in Data Science</b><br>
@@ -34,6 +34,7 @@ title: Resume
 <li>Build data augmentation pipelines and novel models for face recognition for 1:1 Matching across pair of images from different domains ranging from PII cards to Print Photos to Selfies.</li>
 <li>Help create quality estimates for images of faces since they are all across a wide variety of domains and poor quality face-match estimates needed to be highlighted for manual review.</li>
 </ul>
+<i>Contact</i>: <a href="https://www.linkedin.com/in/anupam-mohanty/" target="_blank">Anupam Mohanty</a>
 </p>
 
 <p>
