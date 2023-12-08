@@ -5,14 +5,11 @@ title: Home
 
 # Hello Everyone!
 
-I am Vinayak Nayak, a Mechanical Engineer by profession, currently employed as a Data Scientist at [Perfios Software Solutions Pvt. Ltd.](https://www.perfios.com/)
-
-
-Ever since I discovered that sophisticated real-world phenomena could be modeled as simulations using the power of computing, which was during my undergraduate studies, I have been fascinated by the potential of data. During that time, using C++, we modeled a physical process involving metal vapor deposition in a low-pressure container by heating heavy metals. This process was inherently stochastic, and we simulated it using a Monte Carlo simulation. It was a 'Eureka' moment for me. Since then, I have come a long way, and considering the rapid pace at which this field is growing, it still feels like there is much more to explore in the realm of data and computing, given its constant evolution.
-
-
 <img src="https://raw.githubusercontent.com/ElisonSherton/elisonsherton.github.io/master/public/profile_pic.jpg">
 
+I am Vinayak Nayak, a Mechanical Engineer by profession, currently employed as a Data Scientist at [Perfios Software Solutions Pvt. Ltd.](https://www.perfios.com/)
+
+Ever since I discovered that sophisticated real-world phenomena could be modeled as simulations using the power of computing, which was during my undergraduate studies, I have been fascinated by the potential of data. During that time, using C++, we modeled a physical process involving metal vapor deposition in a low-pressure container by heating heavy metals. This process was inherently stochastic, and we simulated it using a Monte Carlo simulation. It was a 'Eureka' moment for me. Since then, I have come a long way, and considering the rapid pace at which this field is growing, it still feels like there is much more to explore in the realm of data and computing, given its constant evolution.
 
 I have tackled problems involving structured/tabular data and relational data (both SQL and NoSQL) to extract insights, make predictions, prescribe solutions, and identify/interpret patterns in the data. However, the majority of my work involves dealing with unstructured data, particularly images. I have undertaken various use cases such as image classification, image regression, content-based image retrieval, image-to-text conversion, and image captioning. Additionally, I possess functional knowledge of Natural Language Processing tasks, including Language Modeling, Text Classification, Text Generation, and Text Processing.
 
