@@ -25,14 +25,26 @@ title: Resume
 ## WORK EXPERIENCE
 
 <p>
+<b>Senior AI/ML Associate</b><br>
+<b>JP Morgan Chase & Co.<a href="https://www.jpmorganchase.com/" target="_blank">🔗</a></b><br>
+<i>08/2024 – Present; Mumbai, India</i><br>
+<i>Responsibilities/Tasks</i><br>
+<ul>
+<li>Working on enhancing the performance of a pre-built conversational agent in banking domain</li>
+</ul>
+<i>Contact</i>: <a href="https://www.linkedin.com/in/kristine-ma-991594/" target="_blank">Kristine Ma</a>
+</p>
+
+<p>
 <b>Data Scientist</b><br>
 <b>Perfios Software Solutions Private Ltd.<a href="https://www.perfios.com/" target="_blank">🔗</a></b><br>
-<i>09/2022 – Present; Mumbai, India</i><br>
+<i>09/2022 – 08/2024; Mumbai, India</i><br>
 <i>Responsibilities/Tasks</i><br>
 <ul>
 <li>Work on 1:1 Face Matching and Face Image Quality Analysis</li>
 <li>Build data augmentation pipelines and novel models for face recognition for 1:1 Matching across pair of images from different domains ranging from PII cards to Print Photos to Selfies.</li>
 <li>Help create quality estimates for images of faces since they are all across a wide variety of domains and poor quality face-match estimates needed to be highlighted for manual review.</li>
+<li>Enhance an inbuilt model to establish liveness of a person/customer undergoing a KYC journey i.e. whether the person is actually present live when doing the journey or someone is faking the presence of the user using a cutout photo, mask, display screen etc.</li>
 </ul>
 <i>Contact</i>: <a href="https://www.linkedin.com/in/anupam-mohanty/" target="_blank">Anupam Mohanty</a>
 </p>
